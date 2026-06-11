@@ -1,0 +1,3266 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Бейорганикалық химия және элементтер химиясы | КТ-ға дайындық</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.15), transparent 34%),
+        radial-gradient(circle at top right, rgba(99, 102, 241, 0.13), transparent 32%),
+        radial-gradient(circle at bottom, rgba(20, 184, 166, 0.13), transparent 34%),
+        linear-gradient(135deg, #f8fbff 0%, #f3f7ff 44%, #ffffff 100%);
+      color: #172033;
+      line-height: 1.62;
+      padding-bottom: 44px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    .hero {
+      border-radius: 30px;
+      padding: 30px 18px;
+      margin-bottom: 14px;
+      color: white;
+      background:
+        linear-gradient(135deg, rgba(30, 64, 175, 0.96), rgba(79, 70, 229, 0.93), rgba(13, 148, 136, 0.9)),
+        url("data:image/svg+xml,%3Csvg width='190' height='190' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.18)' stroke-width='2'%3E%3Ccircle cx='95' cy='95' r='42'/%3E%3Ccircle cx='95' cy='95' r='8' fill='rgba(255,255,255,0.25)'/%3E%3Cpath d='M28 95h134M95 28v134M50 50l90 90M140 50l-90 90'/%3E%3Cellipse cx='95' cy='95' rx='72' ry='26'/%3E%3Cellipse cx='95' cy='95' rx='26' ry='72'/%3E%3C/g%3E%3C/svg%3E");
+      box-shadow: 0 18px 45px rgba(30, 64, 175, 0.24);
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      font-size: 13px;
+      font-weight: 850;
+      margin-bottom: 12px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h1 {
+      font-size: clamp(25px, 5vw, 46px);
+      line-height: 1.08;
+      margin-bottom: 12px;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      max-width: 930px;
+      font-size: clamp(15px, 2.5vw, 18px);
+      opacity: 0.96;
+      margin-bottom: 18px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.23);
+      border-radius: 18px;
+      padding: 12px;
+      min-height: 88px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .hero-card span {
+      display: block;
+      font-size: 13px;
+      opacity: 0.92;
+    }
+
+    .rights {
+      margin: 12px 0 16px;
+      border-radius: 18px;
+      padding: 13px 14px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .top-nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 251, 255, 0.88);
+      backdrop-filter: blur(14px);
+      padding: 8px 0;
+      margin-bottom: 16px;
+    }
+
+    .top-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px 2px 8px;
+      scrollbar-width: thin;
+    }
+
+    .top-nav a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      color: #1d4ed8;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(37, 99, 235, 0.16);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.06);
+      white-space: nowrap;
+    }
+
+    .top-nav a:hover {
+      background: #eff6ff;
+      border-color: #93c5fd;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .intro-card {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(37, 99, 235, 0.13);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 14px 36px rgba(37, 99, 235, 0.08);
+    }
+
+    .intro-card h2 {
+      font-size: 21px;
+      margin-bottom: 10px;
+      color: #1d4ed8;
+    }
+
+    .intro-card p {
+      margin-bottom: 10px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      font-size: 12.5px;
+      font-weight: 820;
+    }
+
+    .kt-map {
+      margin-top: 12px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+
+    .kt-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 14px;
+    }
+
+    .kt-row:last-child {
+      border-bottom: none;
+    }
+
+    .kt-row b {
+      color: #0f172a;
+    }
+
+    .kt-row span {
+      color: #475569;
+      font-weight: 850;
+      text-align: right;
+    }
+
+    .source-box {
+      margin-top: 12px;
+      border-radius: 16px;
+      padding: 12px;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      color: #3730a3;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .study-block {
+      scroll-margin-top: 92px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(37, 99, 235, 0.13);
+      border-radius: 24px;
+      margin: 18px 0;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(37, 99, 235, 0.08);
+    }
+
+    .study-block-header {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px;
+      background: linear-gradient(135deg, #dbeafe, #e0e7ff, #ccfbf1);
+      border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+    }
+
+    .block-number {
+      flex: 0 0 auto;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, #1d4ed8, #4f46e5, #0f766e);
+      font-size: 21px;
+      font-weight: 950;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+    }
+
+    .study-block-header h2 {
+      font-size: clamp(20px, 3.2vw, 28px);
+      color: #1d4ed8;
+      line-height: 1.18;
+      margin-bottom: 6px;
+    }
+
+    .study-block-header p {
+      color: #475569;
+      font-size: 14.5px;
+    }
+
+    .mini-tabs {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      padding: 12px 14px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .mini-tabs button {
+      flex: 0 0 auto;
+      border: none;
+      border-radius: 999px;
+      padding: 9px 13px;
+      background: #e2e8f0;
+      color: #334155;
+      font-weight: 880;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .mini-tabs button.active {
+      background: linear-gradient(135deg, #1d4ed8, #4f46e5, #0f766e);
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 16px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    details {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 13px 14px;
+      margin-bottom: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 900;
+      color: #1d4ed8;
+      font-size: 15.5px;
+    }
+
+    details p {
+      margin-top: 9px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    .formula-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .formula {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid #3b82f6;
+      border-radius: 16px;
+      padding: 12px;
+      font-weight: 850;
+      color: #0f172a;
+      overflow-x: auto;
+    }
+
+    .term-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .term {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 12px;
+    }
+
+    .term b {
+      color: #1d4ed8;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .term p {
+      color: #475569;
+      font-size: 14.5px;
+    }
+
+    .question {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 14px;
+      margin-bottom: 13px;
+    }
+
+    .question p {
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .option {
+      display: block;
+      border: 1px solid #dbe3ec;
+      border-radius: 14px;
+      padding: 10px 11px;
+      margin: 8px 0;
+      cursor: pointer;
+      background: #f8fafc;
+      color: #334155;
+      font-size: 14.5px;
+    }
+
+    .option input {
+      margin-right: 8px;
+      transform: translateY(1px);
+    }
+
+    .option.correct {
+      border-color: #16a34a;
+      background: #dcfce7;
+      color: #14532d;
+      font-weight: 800;
+    }
+
+    .option.wrong {
+      border-color: #dc2626;
+      background: #fee2e2;
+      color: #7f1d1d;
+      font-weight: 800;
+    }
+
+    .explain {
+      display: none;
+      margin-top: 10px;
+      border-radius: 14px;
+      padding: 11px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      font-size: 14px;
+    }
+
+    .explain.show {
+      display: block;
+    }
+
+    .check-btn {
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 18px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      background: linear-gradient(135deg, #1d4ed8, #4f46e5, #0f766e);
+      color: white;
+      font-size: 16px;
+      font-weight: 950;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.22);
+    }
+
+    .result {
+      display: none;
+      margin-bottom: 14px;
+      border-radius: 18px;
+      padding: 14px;
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      color: #14532d;
+    }
+
+    .result.show {
+      display: block;
+    }
+
+    .score {
+      font-size: 26px;
+      font-weight: 950;
+      margin-bottom: 4px;
+    }
+
+    .note-card {
+      border-radius: 16px;
+      padding: 13px 14px;
+      margin: 10px 0;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      color: #0c4a6e;
+      font-size: 14.5px;
+      font-weight: 700;
+    }
+
+    .warning-card {
+      border-radius: 16px;
+      padding: 13px 14px;
+      margin: 10px 0;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 14.5px;
+      font-weight: 700;
+    }
+
+    .copyright-note {
+      margin-top: 22px;
+      border-radius: 18px;
+      padding: 14px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 14px;
+      font-weight: 750;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin: 18px 0 8px;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 10px;
+      }
+
+      .hero {
+        border-radius: 22px;
+        padding: 22px 15px;
+      }
+
+      .hero-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .study-block-header {
+        gap: 10px;
+        padding: 15px;
+      }
+
+      .block-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        font-size: 19px;
+      }
+
+      .formula-list,
+      .term-list {
+        grid-template-columns: 1fr;
+      }
+
+      .tab-content {
+        padding: 13px;
+      }
+
+      .top-nav a {
+        font-size: 12.5px;
+        padding: 8px 10px;
+      }
+
+      .kt-row {
+        grid-template-columns: 1fr;
+      }
+
+      .kt-row span {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 430px) {
+      body {
+        background: #f8fbff;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .study-block {
+        border-radius: 20px;
+      }
+
+      .question {
+        padding: 12px;
+      }
+
+      .option {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <div class="hero-badge">Бейорганикалық химия · Элементтер химиясы · КТ</div>
+
+      <h1>Бейорганикалық химия және элементтер химиясы бойынша дайындық сайты</h1>
+
+      <p>
+        Бұл сайт бейорганикалық химия мен элементтер химиясының негізгі бөлімдерін
+        жүйелі қайталауға арналған. Негізгі бағыттар: атом құрылысы, периодтық заң,
+        химиялық байланыс, зат құрылысы, химиялық процестердің заңдылықтары,
+        ерітінділер, тотығу-тотықсыздану реакциялары, комплекс қосылыстар және
+        s-, p-, d-элементтердің қасиеттері.
+      </p>
+
+      <div class="hero-grid">
+        <div class="hero-card">
+          <b>Атом және элемент</b>
+          <span>Ядро, электрон, изотоп, нуклид, периодтық жүйе</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Зат құрылысы</b>
+          <span>Химиялық байланыс, молекула, кристалдық тор</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Химиялық процесс</b>
+          <span>Термодинамика, кинетика, тепе-теңдік, redox</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Элементтер химиясы</b>
+          <span>s-, p-, d-элементтер және қосылыстар қасиеті</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="rights">
+      Автор: Назерке. Барлық құқық қорғалған. Бұл материалды автордың рұқсатынсыз
+      сатуға, көшіруге, қайта таратуға, ақылы курс ретінде қолдануға немесе
+      коммерциялық мақсатта пайдалануға болмайды.
+    </div>
+
+    <div class="top-nav-wrap">
+      <nav class="top-nav">
+        <a href="#block1">1. Атом және элемент</a>
+        <a href="#block2">2. Периодтық заң</a>
+        <a href="#block3">3. Электрондық құрылым</a>
+        <a href="#block4">4. Химиялық байланыс</a>
+        <a href="#block5">5. Зат құрылысы</a>
+        <a href="#block6">6. Термодинамика</a>
+        <a href="#block7">7. Кинетика және тепе-теңдік</a>
+        <a href="#block8">8. Ерітінділер</a>
+        <a href="#block9">9. Redox</a>
+        <a href="#block10">10. Комплекс қосылыстар</a>
+        <a href="#block11">11. s-элементтер</a>
+        <a href="#block12">12. p-элементтер</a>
+        <a href="#block13">13. d-элементтер</a>
+        <a href="#block14">14. Жинақ тест</a>
+      </nav>
+    </div>
+
+    <section class="intro">
+      <div class="intro-card">
+        <h2>Сайттың мақсаты</h2>
+
+        <p>
+          Бейорганикалық химиядағы негізгі заңдылықтарды КТ-ға дайындық үшін
+          жүйелеу: ұғымдарды түсіну, формулаларды қолдану, элементтер қасиеттерін
+          салыстыру және есептерді дұрыс шығару.
+        </p>
+
+        <p>
+          Материал жеке бір кітаптың ретімен емес, КТ құрылымына қажет тақырыптар
+          бойынша беріледі. Қайталауда теория, формула, термин және тест бөліктері
+          бірге қолданылады.
+        </p>
+
+        <div class="kt-map">
+          <div class="kt-row">
+            <b>Негізгі бағыт</b>
+            <span>Бейорганикалық химия</span>
+          </div>
+
+          <div class="kt-row">
+            <b>Қосымша ірі бағыт</b>
+            <span>Элементтер химиясы</span>
+          </div>
+
+          <div class="kt-row">
+            <b>Есептер</b>
+            <span>атом, ерітінді, redox, тепе-теңдік</span>
+          </div>
+
+          <div class="kt-row">
+            <b>Тіл</b>
+            <span>қазақша</span>
+          </div>
+        </div>
+
+        <div class="source-box">
+          Негізгі әдеби бағыттар: Ахметов Н. С.; Шоқыбаев Ж. Ә.; Керімбаева К. З.;
+          Өнербаева З. О.; Шолақтегі Ә.
+        </div>
+      </div>
+
+      <div class="intro-card">
+        <h2>Қамтылатын тақырыптар</h2>
+
+        <div class="tag-list">
+          <span class="tag">Химиялық элемент</span>
+          <span class="tag">Атом құрылысы</span>
+          <span class="tag">Протон, нейтрон, электрон</span>
+          <span class="tag">Изотоп және нуклид</span>
+          <span class="tag">Периодтық заң</span>
+          <span class="tag">Периодтық жүйе</span>
+          <span class="tag">Электрондық конфигурация</span>
+          <span class="tag">Квант сандары</span>
+          <span class="tag">Иондану энергиясы</span>
+          <span class="tag">Электртерістілік</span>
+          <span class="tag">Химиялық байланыс</span>
+          <span class="tag">Коваленттік байланыс</span>
+          <span class="tag">Иондық байланыс</span>
+          <span class="tag">Металдық байланыс</span>
+          <span class="tag">Кристалдық тор</span>
+          <span class="tag">Термодинамика</span>
+          <span class="tag">Кинетика</span>
+          <span class="tag">Химиялық тепе-теңдік</span>
+          <span class="tag">Электролиттер</span>
+          <span class="tag">Гидролиз</span>
+          <span class="tag">Тотығу дәрежесі</span>
+          <span class="tag">Redox теңестіру</span>
+          <span class="tag">Комплекс қосылыстар</span>
+          <span class="tag">s-элементтер</span>
+          <span class="tag">p-элементтер</span>
+          <span class="tag">d-элементтер</span>
+        </div>
+      </div>
+    </section>
+        <section id="block1" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">1</div>
+        <div>
+          <h2>Атом құрылысы және химиялық элемент</h2>
+          <p>
+            Химиялық элемент ұғымы, атом ядросы, протон, нейтрон, электрон,
+            атомдық нөмір, массалық сан, изотоп, нуклид, ион және атомдағы
+            бөлшектер санын анықтау.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block1', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block1', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block1', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block1', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Химиялық элемент ұғымы</summary>
+          <p>
+            Химиялық элемент — ядро заряды бірдей атомдар жиынтығы. Ядро заряды
+            протон санына тәуелді, сондықтан элементтің периодтық жүйедегі реттік
+            нөмірі оның ядросындағы протон санына тең.
+          </p>
+        </details>
+
+        <details>
+          <summary>Атом құрылысы</summary>
+          <p>
+            Атом ядродан және электрондық қабаттан тұрады. Ядрода протондар мен
+            нейтрондар орналасады, ал электрондар ядро айналасындағы электрондық
+            қабаттарда болады. Атом массасының негізгі бөлігі ядроға тиесілі.
+          </p>
+        </details>
+
+        <details>
+          <summary>Протон, нейтрон, электрон</summary>
+          <p>
+            Протон оң зарядты бөлшек, нейтрон зарядсыз бөлшек, электрон теріс
+            зарядты бөлшек. Протон саны элементтің табиғатын анықтайды. Нейтрон
+            саны изотоптарды ажыратуға көмектеседі, ал электрон саны атомның немесе
+            ионның зарядын анықтайды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Атомдық нөмір</summary>
+          <p>
+            Атомдық нөмір Z әрпімен белгіленеді және ядро құрамындағы протон санына
+            тең. Бейтарап атомда протон саны электрон санына тең болады. Мысалы,
+            натрийдің реттік нөмірі 11 болса, оның ядросында 11 протон, бейтарап
+            атомында 11 электрон болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Массалық сан</summary>
+          <p>
+            Массалық сан A ядро құрамындағы протондар мен нейтрондардың жалпы санын
+            көрсетеді. Ол A = Z + N теңдеуімен анықталады. Мұндағы Z — протон саны,
+            N — нейтрон саны.
+          </p>
+        </details>
+
+        <details>
+          <summary>Нейтрон санын анықтау</summary>
+          <p>
+            Нейтрон саны массалық сан мен атомдық нөмірдің айырмасына тең:
+            N = A − Z. Мысалы, ²³Na атомында A = 23, Z = 11, сондықтан
+            N = 23 − 11 = 12 нейтрон.
+          </p>
+        </details>
+
+        <details>
+          <summary>Нуклид</summary>
+          <p>
+            Нуклид — протон саны мен нейтрон саны нақты белгілі атом түрі.
+            Нуклидті жазғанда элемент таңбасының сол жағына массалық сан және
+            атомдық нөмір көрсетіледі. Мысалы, ⁴⁰₂₀Ca — кальций нуклиді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Изотоп</summary>
+          <p>
+            Изотоптар — бір химиялық элементтің нейтрон саны әртүрлі атомдары.
+            Олардың протон саны бірдей, сондықтан химиялық элементі бірдей болады,
+            бірақ массалық саны әртүрлі болады. Мысалы, ³⁵Cl және ³⁷Cl —
+            хлордың изотоптары.
+          </p>
+        </details>
+
+        <details>
+          <summary>Изобар және изотон</summary>
+          <p>
+            Изобарлар — массалық саны бірдей, бірақ протон саны әртүрлі атомдар.
+            Изотондар — нейтрон саны бірдей, бірақ протон саны әртүрлі атомдар.
+            Бұл ұғымдар атом ядросының құрамын салыстыруда қолданылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ион түзілуі</summary>
+          <p>
+            Атом электрон берсе, оң зарядты катион түзіледі. Атом электрон қосып алса,
+            теріс зарядты анион түзіледі. Ион түзілгенде ядро құрамындағы протон саны
+            өзгермейді, тек электрон саны өзгереді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Катиондағы электрон саны</summary>
+          <p>
+            Катионда электрон саны бейтарап атоммен салыстырғанда аз болады.
+            Мысалы, Mg атомында 12 электрон бар, ал Mg²⁺ ионында 10 электрон бар,
+            себебі ол 2 электрон берген.
+          </p>
+        </details>
+
+        <details>
+          <summary>Аниондағы электрон саны</summary>
+          <p>
+            Анионда электрон саны бейтарап атоммен салыстырғанда көп болады.
+            Мысалы, Cl атомында 17 электрон бар, ал Cl⁻ ионында 18 электрон бар,
+            себебі ол 1 электрон қосып алған.
+          </p>
+        </details>
+
+        <details>
+          <summary>Химиялық реакцияда ядро өзгермейді</summary>
+          <p>
+            Химиялық реакцияларда атомдардың электрондық қабаты өзгеріп, байланыстар
+            үзіледі немесе түзіледі. Ал атом ядросы әдетте өзгермейді. Ядроның өзгеруі
+            химиялық емес, ядролық процестерге жатады.
+          </p>
+        </details>
+
+        <details>
+          <summary>КТ үшін маңызды дағды</summary>
+          <p>
+            Бұл тақырыпта протон, нейтрон, электрон санын есептеу; изотоп пен
+            нуклидті ажырату; ион зарядынан электрон санын табу; атомдық нөмір мен
+            массалық санды дұрыс қолдану маңызды.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Z = протон саны</div>
+          <div class="formula">Бейтарап атомда: p = e</div>
+          <div class="formula">A = Z + N</div>
+          <div class="formula">N = A − Z</div>
+          <div class="formula">p = Z</div>
+          <div class="formula">e(бейтарап атом) = Z</div>
+          <div class="formula">e(катион) = Z − заряд саны</div>
+          <div class="formula">e(анион) = Z + заряд саны</div>
+          <div class="formula">Катион → электрон береді</div>
+          <div class="formula">Анион → электрон қосып алады</div>
+          <div class="formula">Изотоптар: Z бірдей, A әртүрлі</div>
+          <div class="formula">Изобарлар: A бірдей, Z әртүрлі</div>
+          <div class="formula">Изотондар: N бірдей, Z әртүрлі</div>
+          <div class="formula">Нуклид → Z және N нақты белгілі атом түрі</div>
+          <div class="formula">Ядро заряды = +Z</div>
+          <div class="formula">Ион заряды = p − e</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Химиялық элемент</b>
+            <p>Ядро заряды бірдей атомдар жиынтығы.</p>
+          </div>
+
+          <div class="term">
+            <b>Атом</b>
+            <p>Химиялық элементтің қасиетін сақтайтын ең кіші бөлшек.</p>
+          </div>
+
+          <div class="term">
+            <b>Ядро</b>
+            <p>Протондар мен нейтрондардан тұратын атомның орталық бөлігі.</p>
+          </div>
+
+          <div class="term">
+            <b>Протон</b>
+            <p>Оң зарядты ядролық бөлшек; саны элементтің реттік нөміріне тең.</p>
+          </div>
+
+          <div class="term">
+            <b>Нейтрон</b>
+            <p>Зарядсыз ядролық бөлшек; изотоптардың массалық айырмашылығын туғызады.</p>
+          </div>
+
+          <div class="term">
+            <b>Электрон</b>
+            <p>Теріс зарядты бөлшек; химиялық байланыс пен ион түзілуге қатысады.</p>
+          </div>
+
+          <div class="term">
+            <b>Атомдық нөмір</b>
+            <p>Периодтық жүйедегі элементтің реттік нөмірі; протон санына тең.</p>
+          </div>
+
+          <div class="term">
+            <b>Массалық сан</b>
+            <p>Ядродағы протон мен нейтрон санының қосындысы.</p>
+          </div>
+
+          <div class="term">
+            <b>Нуклид</b>
+            <p>Протон және нейтрон саны нақты көрсетілген атом түрі.</p>
+          </div>
+
+          <div class="term">
+            <b>Изотоп</b>
+            <p>Бір элементтің нейтрон саны әртүрлі атомдары.</p>
+          </div>
+
+          <div class="term">
+            <b>Изобар</b>
+            <p>Массалық саны бірдей, атомдық нөмірі әртүрлі атомдар.</p>
+          </div>
+
+          <div class="term">
+            <b>Изотон</b>
+            <p>Нейтрон саны бірдей, атомдық нөмірі әртүрлі атомдар.</p>
+          </div>
+
+          <div class="term">
+            <b>Катион</b>
+            <p>Электрон беріп түзілетін оң зарядты ион.</p>
+          </div>
+
+          <div class="term">
+            <b>Анион</b>
+            <p>Электрон қосып алып түзілетін теріс зарядты ион.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block1Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Химиялық элемент ұғымына сәйкес келетін анықтама:</p>
+          <label class="option"><input type="radio" name="b1q1" value="0"> Массалық саны бірдей атомдар жиынтығы</label>
+          <label class="option"><input type="radio" name="b1q1" value="1"> Нейтрон саны бірдей атомдар жиынтығы</label>
+          <label class="option"><input type="radio" name="b1q1" value="2"> Ядро заряды бірдей атомдар жиынтығы</label>
+          <label class="option"><input type="radio" name="b1q1" value="3"> Электрондық қабаты бірдей иондар жиынтығы</label>
+          <label class="option"><input type="radio" name="b1q1" value="4"> Химиялық байланыс түрі бірдей заттар жиынтығы</label>
+          <div class="explain">Дұрыс жауап: C. Элементтің табиғатын ядро заряды, яғни протон саны анықтайды.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Атомдық нөмір Z нені көрсетеді?</p>
+          <label class="option"><input type="radio" name="b1q2" value="0"> Атомдағы нейтрондар мен электрондардың қосындысын</label>
+          <label class="option"><input type="radio" name="b1q2" value="1"> Изотоптардың орташа массасын</label>
+          <label class="option"><input type="radio" name="b1q2" value="2"> Электрондық қабаттар санын</label>
+          <label class="option"><input type="radio" name="b1q2" value="3"> Атомдағы барлық нуклондардың санын</label>
+          <label class="option"><input type="radio" name="b1q2" value="4"> Ядродағы протондар санын</label>
+          <div class="explain">Дұрыс жауап: E. Z — элементтің реттік нөмірі және протон саны.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Массалық санның дұрыс формуласы:</p>
+          <label class="option"><input type="radio" name="b1q3" value="0"> A = Z + N</label>
+          <label class="option"><input type="radio" name="b1q3" value="1"> A = Z − N</label>
+          <label class="option"><input type="radio" name="b1q3" value="2"> A = e − p</label>
+          <label class="option"><input type="radio" name="b1q3" value="3"> A = p / N</label>
+          <label class="option"><input type="radio" name="b1q3" value="4"> A = Z + e</label>
+          <div class="explain">Дұрыс жауап: A. Массалық сан протондар мен нейтрондардың қосындысына тең.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. ²³Na атомындағы нейтрон саны. Na үшін Z = 11.</p>
+          <label class="option"><input type="radio" name="b1q4" value="0"> 10</label>
+          <label class="option"><input type="radio" name="b1q4" value="1"> 11</label>
+          <label class="option"><input type="radio" name="b1q4" value="2"> 13</label>
+          <label class="option"><input type="radio" name="b1q4" value="3"> 12</label>
+          <label class="option"><input type="radio" name="b1q4" value="4"> 14</label>
+          <div class="explain">Дұрыс жауап: D. Шешуі: N = A − Z = 23 − 11 = 12.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. ⁴⁰Ca атомындағы протон, нейтрон және электрон саны. Ca үшін Z = 20.</p>
+          <label class="option"><input type="radio" name="b1q5" value="0"> p=20, N=18, e=20</label>
+          <label class="option"><input type="radio" name="b1q5" value="1"> p=20, N=20, e=20</label>
+          <label class="option"><input type="radio" name="b1q5" value="2"> p=18, N=22, e=18</label>
+          <label class="option"><input type="radio" name="b1q5" value="3"> p=20, N=22, e=18</label>
+          <label class="option"><input type="radio" name="b1q5" value="4"> p=22, N=18, e=20</label>
+          <div class="explain">Дұрыс жауап: B. Шешуі: p=Z=20; N=A−Z=40−20=20; бейтарап атомда e=20.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Изотоптарға сәйкес келетін сипаттама:</p>
+          <label class="option"><input type="radio" name="b1q6" value="0"> Массалық саны бірдей, протон саны әртүрлі атомдар</label>
+          <label class="option"><input type="radio" name="b1q6" value="1"> Нейтрон саны бірдей, протон саны әртүрлі атомдар</label>
+          <label class="option"><input type="radio" name="b1q6" value="2"> Электрон саны бірдей, ядро заряды әртүрлі иондар</label>
+          <label class="option"><input type="radio" name="b1q6" value="3"> Химиялық байланысы бірдей молекулалар</label>
+          <label class="option"><input type="radio" name="b1q6" value="4"> Протон саны бірдей, нейтрон саны әртүрлі атомдар</label>
+          <div class="explain">Дұрыс жауап: E. Изотоптар бір элементке жатады, сондықтан Z бірдей, бірақ N әртүрлі болады.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. ³⁵Cl және ³⁷Cl атомдары бір-біріне қатысты:</p>
+          <label class="option"><input type="radio" name="b1q7" value="0"> Изобарлар</label>
+          <label class="option"><input type="radio" name="b1q7" value="1"> Изотондар</label>
+          <label class="option"><input type="radio" name="b1q7" value="2"> Изотоптар</label>
+          <label class="option"><input type="radio" name="b1q7" value="3"> Катиондар</label>
+          <label class="option"><input type="radio" name="b1q7" value="4"> Аниондар</label>
+          <div class="explain">Дұрыс жауап: C. Екеуі де хлор атомдары, Z бірдей, массалық саны әртүрлі.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Изобарларға сәйкес келетін қатар:</p>
+          <label class="option"><input type="radio" name="b1q8" value="0"> ⁴⁰Ar және ⁴⁰Ca</label>
+          <label class="option"><input type="radio" name="b1q8" value="1"> ³⁵Cl және ³⁷Cl</label>
+          <label class="option"><input type="radio" name="b1q8" value="2"> ¹²C және ¹³C</label>
+          <label class="option"><input type="radio" name="b1q8" value="3"> ²³Na және ²⁴Mg</label>
+          <label class="option"><input type="radio" name="b1q8" value="4"> ¹H және ²H</label>
+          <div class="explain">Дұрыс жауап: A. Изобарларда массалық сан бірдей, ал атомдық нөмір әртүрлі болады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Mg²⁺ ионындағы электрон саны. Mg үшін Z = 12.</p>
+          <label class="option"><input type="radio" name="b1q9" value="0"> 8</label>
+          <label class="option"><input type="radio" name="b1q9" value="1"> 9</label>
+          <label class="option"><input type="radio" name="b1q9" value="2"> 11</label>
+          <label class="option"><input type="radio" name="b1q9" value="3"> 10</label>
+          <label class="option"><input type="radio" name="b1q9" value="4"> 12</label>
+          <div class="explain">Дұрыс жауап: D. Mg²⁺ екі электрон берген: e = 12 − 2 = 10.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Cl⁻ ионындағы электрон саны. Cl үшін Z = 17.</p>
+          <label class="option"><input type="radio" name="b1q10" value="0"> 16</label>
+          <label class="option"><input type="radio" name="b1q10" value="1"> 18</label>
+          <label class="option"><input type="radio" name="b1q10" value="2"> 17</label>
+          <label class="option"><input type="radio" name="b1q10" value="3"> 19</label>
+          <label class="option"><input type="radio" name="b1q10" value="4"> 20</label>
+          <div class="explain">Дұрыс жауап: B. Cl⁻ бір электрон қосып алған: e = 17 + 1 = 18.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>11. Al³⁺ ионындағы протон және электрон саны. Al үшін Z = 13.</p>
+          <label class="option"><input type="radio" name="b1q11" value="0"> p=10, e=13</label>
+          <label class="option"><input type="radio" name="b1q11" value="1"> p=13, e=13</label>
+          <label class="option"><input type="radio" name="b1q11" value="2"> p=10, e=10</label>
+          <label class="option"><input type="radio" name="b1q11" value="3"> p=16, e=13</label>
+          <label class="option"><input type="radio" name="b1q11" value="4"> p=13, e=10</label>
+          <div class="explain">Дұрыс жауап: E. Ион түзілгенде протон саны өзгермейді: p=13; Al³⁺ үш электрон берген: e=10.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>12. S²⁻ ионындағы электрон саны. S үшін Z = 16.</p>
+          <label class="option"><input type="radio" name="b1q12" value="0"> 14</label>
+          <label class="option"><input type="radio" name="b1q12" value="1"> 16</label>
+          <label class="option"><input type="radio" name="b1q12" value="2"> 18</label>
+          <label class="option"><input type="radio" name="b1q12" value="3"> 20</label>
+          <label class="option"><input type="radio" name="b1q12" value="4"> 22</label>
+          <div class="explain">Дұрыс жауап: C. S²⁻ екі электрон қосып алған: e = 16 + 2 = 18.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>13. ⁵⁶Fe атомындағы нейтрон саны. Fe үшін Z = 26.</p>
+          <label class="option"><input type="radio" name="b1q13" value="0"> 30</label>
+          <label class="option"><input type="radio" name="b1q13" value="1"> 28</label>
+          <label class="option"><input type="radio" name="b1q13" value="2"> 29</label>
+          <label class="option"><input type="radio" name="b1q13" value="3"> 31</label>
+          <label class="option"><input type="radio" name="b1q13" value="4"> 32</label>
+          <div class="explain">Дұрыс жауап: A. Шешуі: N = A − Z = 56 − 26 = 30.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>14. Ион түзілгенде атом ядросында қандай өзгеріс болады?</p>
+          <label class="option"><input type="radio" name="b1q14" value="0"> Протон саны міндетті түрде азаяды</label>
+          <label class="option"><input type="radio" name="b1q14" value="1"> Нейтрон саны міндетті түрде артады</label>
+          <label class="option"><input type="radio" name="b1q14" value="2"> Массалық сан әрқашан екі есе өзгереді</label>
+          <label class="option"><input type="radio" name="b1q14" value="3"> Ядро құрамы өзгермейді, электрон саны өзгереді</label>
+          <label class="option"><input type="radio" name="b1q14" value="4"> Элемент басқа элементке айналады</label>
+          <div class="explain">Дұрыс жауап: D. Ион түзілуі электрон беру немесе қосып алу арқылы жүреді; ядро өзгермейді.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>15. Химиялық реакциялар кезінде атом ядросы әдетте неге өзгермейді?</p>
+          <label class="option"><input type="radio" name="b1q15" value="0"> Химиялық реакция тек нейтрондарды алмастырады</label>
+          <label class="option"><input type="radio" name="b1q15" value="1"> Химиялық реакциялар электрондық қабат пен байланыстардың өзгеруіне негізделеді</label>
+          <label class="option"><input type="radio" name="b1q15" value="2"> Химиялық реакцияда протон саны әрқашан артады</label>
+          <label class="option"><input type="radio" name="b1q15" value="3"> Химиялық реакция атомдық нөмірді міндетті түрде өзгертеді</label>
+          <label class="option"><input type="radio" name="b1q15" value="4"> Химиялық реакцияда барлық ядролар бөлінеді</label>
+          <div class="explain">Дұрыс жауап: B. Химиялық процестерде байланыстар үзіліп-түзіледі, ал ядролық құрам сақталады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>16. Қай қатарда бөлшек пен заряды дұрыс сәйкестендірілген?</p>
+          <label class="option"><input type="radio" name="b1q16" value="0"> Протон — теріс, нейтрон — оң, электрон — зарядсыз</label>
+          <label class="option"><input type="radio" name="b1q16" value="1"> Протон — зарядсыз, нейтрон — теріс, электрон — оң</label>
+          <label class="option"><input type="radio" name="b1q16" value="2"> Протон — оң, нейтрон — теріс, электрон — зарядсыз</label>
+          <label class="option"><input type="radio" name="b1q16" value="3"> Протон — теріс, нейтрон — зарядсыз, электрон — оң</label>
+          <label class="option"><input type="radio" name="b1q16" value="4"> Протон — оң, нейтрон — зарядсыз, электрон — теріс</label>
+          <div class="explain">Дұрыс жауап: E. Протон оң зарядты, нейтрон бейтарап, электрон теріс зарядты.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block1')">Тестті тексеру</button>
+      </div>
+    </section>
+        <section id="block3" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">3</div>
+        <div>
+          <h2>Электрондық құрылым және квант сандары</h2>
+          <p>
+            Электрондық қабаттар, деңгейшелер, орбитальдар, s-, p-, d-, f-деңгейшелер,
+            Паули принципі, Хунд ережесі, Клечковский ережесі, электрондық конфигурация
+            және элементтің орнын анықтау.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block3', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block3', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block3', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block3', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Электрондық құрылымның маңызы</summary>
+          <p>
+            Атомның химиялық қасиеттері көбіне электрондық қабаттың құрылысына,
+            әсіресе сыртқы электрондарға байланысты. Электрондық конфигурация арқылы
+            элементтің периодын, тобын, блогын, валенттік электрондарын және химиялық
+            белсенділігін болжауға болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Энергетикалық деңгей</summary>
+          <p>
+            Электрондар атомда белгілі энергетикалық деңгейлерде орналасады.
+            Негізгі энергетикалық деңгей n квант санымен сипатталады. n мәні 1, 2, 3,
+            4 және әрі қарай арта береді. n неғұрлым үлкен болса, электрон ядродан
+            соғұрлым алысырақ орналасады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Деңгейше</summary>
+          <p>
+            Әр энергетикалық деңгей бірнеше деңгейшеден тұрады. Олар s, p, d, f
+            әріптерімен белгіленеді. Бірінші деңгейде тек s-деңгейше, екінші деңгейде
+            s және p, үшінші деңгейде s, p, d деңгейшелері болуы мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Орбиталь</summary>
+          <p>
+            Орбиталь — электронның болу ықтималдығы жоғары кеңістік аймағы.
+            Бір орбитальда қарама-қарсы спинді ең көп екі электрон ғана орналаса алады.
+            s-деңгейшеде 1 орбиталь, p-деңгейшеде 3 орбиталь, d-деңгейшеде 5 орбиталь,
+            f-деңгейшеде 7 орбиталь болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Деңгейшелердің электрон сыйымдылығы</summary>
+          <p>
+            Бір орбиталь ең көп 2 электрон ұстайтындықтан, s-деңгейше 2 электрон,
+            p-деңгейше 6 электрон, d-деңгейше 10 электрон, f-деңгейше 14 электрон
+            қабылдай алады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Квант сандары</summary>
+          <p>
+            Электрон күйін төрт квант саны сипаттайды: негізгі квант саны n,
+            орбиталь квант саны l, магнит квант саны m және спин квант саны s.
+            Бұл сандар электронның энергиясын, орбиталь түрін, кеңістіктегі бағытын
+            және спинін сипаттайды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Негізгі квант саны</summary>
+          <p>
+            Негізгі квант саны n энергетикалық деңгейді көрсетеді. Ол электронның
+            энергиясы мен ядродан орташа қашықтығына байланысты. Период нөмірі
+            көбіне сыртқы электрон орналасқан ең үлкен n мәніне сәйкес келеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Орбиталь квант саны</summary>
+          <p>
+            Орбиталь квант саны l деңгейше түрін көрсетеді. l = 0 болса s-деңгейше,
+            l = 1 болса p-деңгейше, l = 2 болса d-деңгейше, l = 3 болса f-деңгейше
+            болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Паули принципі</summary>
+          <p>
+            Бір атомда төрт квант саны бірдей екі электрон болмайды. Сондықтан бір
+            орбитальда ең көп екі электрон орналасады және олардың спиндері қарама-қарсы
+            болуы керек.
+          </p>
+        </details>
+
+        <details>
+          <summary>Хунд ережесі</summary>
+          <p>
+            Бір деңгейшенің бірдей энергиялы орбитальдары алдымен жеке-жеке бір
+            электронмен толады, содан кейін ғана жұптаса бастайды. Мысалы, p-деңгейшеде
+            үш орбиталь бар, сондықтан p³ жағдайында үш электрон үш орбитальға жеке
+            орналасады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Клечковский ережесі</summary>
+          <p>
+            Электрондар орбитальдарға энергиясының өсу ретімен орналасады.
+            Толтырылу реті көбіне n + l қосындысына тәуелді. n + l мәні кіші орбиталь
+            алдымен толады. Егер n + l бірдей болса, n мәні кіші орбиталь бұрын толады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Орбитальдардың толу реті</summary>
+          <p>
+            Көп қолданылатын толу реті: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d,
+            5p, 6s, 4f, 5d, 6p. d-элементтерде 4s деңгейшесі 3d-ден бұрын толады,
+            бірақ ион түзілгенде электрондар алдымен сыртқы 4s деңгейшесінен кетеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Валенттік электрондар</summary>
+          <p>
+            Валенттік электрондар — химиялық байланыс түзуге қатысатын сыртқы
+            электрондар. Негізгі топша элементтерінде валенттік электрондар саны
+            көбіне топ нөмірімен байланысты болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>КТ үшін маңызды дағды</summary>
+          <p>
+            Электрондық конфигурация бойынша элементті тану, периодын және блогын
+            анықтау, валенттік электрон санын табу, иондардың электрондық құрылымын
+            жазу және орбитальдардың толу ретін дұрыс қолдану маңызды.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">1 орбиталь → ең көп 2 электрон</div>
+          <div class="formula">s-деңгейше → 1 орбиталь → 2 электрон</div>
+          <div class="formula">p-деңгейше → 3 орбиталь → 6 электрон</div>
+          <div class="formula">d-деңгейше → 5 орбиталь → 10 электрон</div>
+          <div class="formula">f-деңгейше → 7 орбиталь → 14 электрон</div>
+          <div class="formula">Қабат сыйымдылығы: 2n²</div>
+          <div class="formula">l = 0 → s</div>
+          <div class="formula">l = 1 → p</div>
+          <div class="formula">l = 2 → d</div>
+          <div class="formula">l = 3 → f</div>
+          <div class="formula">Толу реті: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p</div>
+          <div class="formula">Паули: бір орбитальда ең көп 2e⁻</div>
+          <div class="formula">Хунд: бірдей орбитальдар алдымен жеке толады</div>
+          <div class="formula">Клечковский: n + l кіші деңгейше бұрын толады</div>
+          <div class="formula">Период → ең үлкен n мәні</div>
+          <div class="formula">Блок → соңғы электрон орналасқан деңгейше</div>
+          <div class="formula">Na: 1s²2s²2p⁶3s¹</div>
+          <div class="formula">Cl: 1s²2s²2p⁶3s²3p⁵</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Электрондық конфигурация</b>
+            <p>Электрондардың деңгейлер мен деңгейшелер бойынша орналасу жазбасы.</p>
+          </div>
+
+          <div class="term">
+            <b>Энергетикалық деңгей</b>
+            <p>Электрон орналасатын негізгі энергия қабаты.</p>
+          </div>
+
+          <div class="term">
+            <b>Деңгейше</b>
+            <p>Энергетикалық деңгей ішіндегі s, p, d, f түріндегі бөлім.</p>
+          </div>
+
+          <div class="term">
+            <b>Орбиталь</b>
+            <p>Электронның болу ықтималдығы жоғары кеңістік аймағы.</p>
+          </div>
+
+          <div class="term">
+            <b>Квант саны</b>
+            <p>Электрон күйін сипаттайтын сандық сипаттама.</p>
+          </div>
+
+          <div class="term">
+            <b>Негізгі квант саны</b>
+            <p>Электронның энергетикалық деңгейін көрсетеді.</p>
+          </div>
+
+          <div class="term">
+            <b>Орбиталь квант саны</b>
+            <p>Деңгейше түрін анықтайды: s, p, d, f.</p>
+          </div>
+
+          <div class="term">
+            <b>Магнит квант саны</b>
+            <p>Орбитальдың кеңістіктегі бағытын сипаттайды.</p>
+          </div>
+
+          <div class="term">
+            <b>Спин квант саны</b>
+            <p>Электронның өзіндік айналу күйін сипаттайды.</p>
+          </div>
+
+          <div class="term">
+            <b>Паули принципі</b>
+            <p>Бір атомда төрт квант саны бірдей екі электрон болмайды.</p>
+          </div>
+
+          <div class="term">
+            <b>Хунд ережесі</b>
+            <p>Бірдей энергиялы орбитальдар алдымен жеке электрондармен толады.</p>
+          </div>
+
+          <div class="term">
+            <b>Клечковский ережесі</b>
+            <p>Орбитальдар n + l мәнінің өсу ретімен толады.</p>
+          </div>
+
+          <div class="term">
+            <b>Валенттік электрон</b>
+            <p>Химиялық байланыс түзуге қатысатын сыртқы электрон.</p>
+          </div>
+
+          <div class="term">
+            <b>Электрондық қабат</b>
+            <p>Электрондар орналасатын негізгі энергетикалық аймақ.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block3Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Электрондық конфигурация нені көрсетеді?</p>
+          <label class="option"><input type="radio" name="b3q1" value="0"> Ядродағы протон мен нейтрондардың нақты орналасуын</label>
+          <label class="option"><input type="radio" name="b3q1" value="1"> Атомдық массаның изотоптар бойынша орташа мәнін</label>
+          <label class="option"><input type="radio" name="b3q1" value="2"> Электрондардың деңгейлер мен деңгейшелер бойынша орналасуын</label>
+          <label class="option"><input type="radio" name="b3q1" value="3"> Тек атом радиусының сандық мәнін</label>
+          <label class="option"><input type="radio" name="b3q1" value="4"> Молекуладағы байланыс бұрыштарын ғана</label>
+          <div class="explain">Дұрыс жауап: C. Электрондық конфигурация электрондардың атомда қалай орналасқанын көрсетеді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. s-деңгейшеде ең көп қанша электрон орналасады?</p>
+          <label class="option"><input type="radio" name="b3q2" value="0"> 1</label>
+          <label class="option"><input type="radio" name="b3q2" value="1"> 4</label>
+          <label class="option"><input type="radio" name="b3q2" value="2"> 6</label>
+          <label class="option"><input type="radio" name="b3q2" value="3"> 10</label>
+          <label class="option"><input type="radio" name="b3q2" value="4"> 2</label>
+          <div class="explain">Дұрыс жауап: E. s-деңгейшеде 1 орбиталь бар, бір орбитальда ең көп 2 электрон орналасады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. p-деңгейшенің максимал электрон сыйымдылығы:</p>
+          <label class="option"><input type="radio" name="b3q3" value="0"> 6</label>
+          <label class="option"><input type="radio" name="b3q3" value="1"> 2</label>
+          <label class="option"><input type="radio" name="b3q3" value="2"> 8</label>
+          <label class="option"><input type="radio" name="b3q3" value="3"> 10</label>
+          <label class="option"><input type="radio" name="b3q3" value="4"> 14</label>
+          <div class="explain">Дұрыс жауап: A. p-деңгейшеде 3 орбиталь бар, әрқайсысына 2 электроннан: 3·2=6.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. d-деңгейшеде қанша орбиталь бар?</p>
+          <label class="option"><input type="radio" name="b3q4" value="0"> 1</label>
+          <label class="option"><input type="radio" name="b3q4" value="1"> 3</label>
+          <label class="option"><input type="radio" name="b3q4" value="2"> 4</label>
+          <label class="option"><input type="radio" name="b3q4" value="3"> 5</label>
+          <label class="option"><input type="radio" name="b3q4" value="4"> 7</label>
+          <div class="explain">Дұрыс жауап: D. d-деңгейшеде 5 орбиталь бар, сондықтан ең көп 10 электрон орналасады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. f-деңгейшеге ең көп қанша электрон сыяды?</p>
+          <label class="option"><input type="radio" name="b3q5" value="0"> 10</label>
+          <label class="option"><input type="radio" name="b3q5" value="1"> 14</label>
+          <label class="option"><input type="radio" name="b3q5" value="2"> 12</label>
+          <label class="option"><input type="radio" name="b3q5" value="3"> 8</label>
+          <label class="option"><input type="radio" name="b3q5" value="4"> 6</label>
+          <div class="explain">Дұрыс жауап: B. f-деңгейшеде 7 орбиталь бар, 7·2=14 электрон.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Паули принципіне сәйкес келетін тұжырым:</p>
+          <label class="option"><input type="radio" name="b3q6" value="0"> Бір деңгейшедегі орбитальдар алдымен жеке толады</label>
+          <label class="option"><input type="radio" name="b3q6" value="1"> Электрондар тек p-деңгейшеге орналасады</label>
+          <label class="option"><input type="radio" name="b3q6" value="2"> Атом радиусы период бойынша артады</label>
+          <label class="option"><input type="radio" name="b3q6" value="3"> Барлық электрондардың энергиясы бірдей болады</label>
+          <label class="option"><input type="radio" name="b3q6" value="4"> Бір атомда төрт квант саны бірдей екі электрон болмайды</label>
+          <div class="explain">Дұрыс жауап: E. Паули принципі бойынша бір орбитальда ең көп екі электрон, спиндері қарама-қарсы орналасады.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Хунд ережесінің дұрыс мазмұны:</p>
+          <label class="option"><input type="radio" name="b3q7" value="0"> Орбитальдар тек массалық сан бойынша толады</label>
+          <label class="option"><input type="radio" name="b3q7" value="1"> Электрондар алдымен ядроға кіреді</label>
+          <label class="option"><input type="radio" name="b3q7" value="2"> Бірдей энергиялы орбитальдар алдымен жеке электрондармен толады</label>
+          <label class="option"><input type="radio" name="b3q7" value="3"> Электрондар тек жұптасып орналасады</label>
+          <label class="option"><input type="radio" name="b3q7" value="4"> Иондарда электрон саны протон санына тең болады</label>
+          <div class="explain">Дұрыс жауап: C. Хунд ережесі p, d, f орбитальдары толғанда қолданылады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Клечковский ережесінде орбитальдардың толу реті неге сүйенеді?</p>
+          <label class="option"><input type="radio" name="b3q8" value="0"> n + l қосындысына</label>
+          <label class="option"><input type="radio" name="b3q8" value="1"> Протон мен нейтрон қосындысына</label>
+          <label class="option"><input type="radio" name="b3q8" value="2"> Тек атомдық массаға</label>
+          <label class="option"><input type="radio" name="b3q8" value="3"> Тек электрон зарядына</label>
+          <label class="option"><input type="radio" name="b3q8" value="4"> Тек ядро радиусына</label>
+          <div class="explain">Дұрыс жауап: A. n+l мәні кіші деңгейше алдымен толады; тең болса, n кіші деңгейше бұрын толады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Орбитальдардың дұрыс толу реті берілген қатар:</p>
+          <label class="option"><input type="radio" name="b3q9" value="0"> 1s → 2p → 2s → 3p → 3s</label>
+          <label class="option"><input type="radio" name="b3q9" value="1"> 1s → 3s → 2s → 2p → 4s</label>
+          <label class="option"><input type="radio" name="b3q9" value="2"> 2s → 1s → 2p → 3s → 3p</label>
+          <label class="option"><input type="radio" name="b3q9" value="3"> 1s → 2s → 2p → 3s → 3p → 4s → 3d</label>
+          <label class="option"><input type="radio" name="b3q9" value="4"> 1s → 3d → 4s → 2s → 2p</label>
+          <div class="explain">Дұрыс жауап: D. Электрондар төмен энергиялы орбитальдардан бастап орналасады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Na атомының электрондық конфигурациясы. Z(Na)=11.</p>
+          <label class="option"><input type="radio" name="b3q10" value="0"> 1s²2s²2p⁵3s²</label>
+          <label class="option"><input type="radio" name="b3q10" value="1"> 1s²2s²2p⁶3s¹</label>
+          <label class="option"><input type="radio" name="b3q10" value="2"> 1s²2s²2p⁶3p¹</label>
+          <label class="option"><input type="radio" name="b3q10" value="3"> 1s²2s²2p⁴3s³</label>
+          <label class="option"><input type="radio" name="b3q10" value="4"> 1s²2s²2p⁶3s²3p¹</label>
+          <div class="explain">Дұрыс жауап: B. Na-да 11 электрон бар: 1s²2s²2p⁶ толық 10 электрон, қалған 1 электрон 3s-деңгейшеге орналасады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>11. Cl атомының сыртқы электрондық қабаты. Z(Cl)=17.</p>
+          <label class="option"><input type="radio" name="b3q11" value="0"> 2s²2p⁶</label>
+          <label class="option"><input type="radio" name="b3q11" value="1"> 3s¹</label>
+          <label class="option"><input type="radio" name="b3q11" value="2"> 3s²3p³</label>
+          <label class="option"><input type="radio" name="b3q11" value="3"> 3s²3p⁴</label>
+          <label class="option"><input type="radio" name="b3q11" value="4"> 3s²3p⁵</label>
+          <div class="explain">Дұрыс жауап: E. Cl: 1s²2s²2p⁶3s²3p⁵, сыртқы қабаты 3s²3p⁵.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>12. 1s²2s²2p⁶3s²3p⁴ конфигурациясына сәйкес элемент:</p>
+          <label class="option"><input type="radio" name="b3q12" value="0"> Na</label>
+          <label class="option"><input type="radio" name="b3q12" value="1"> Mg</label>
+          <label class="option"><input type="radio" name="b3q12" value="2"> S</label>
+          <label class="option"><input type="radio" name="b3q12" value="3"> Cl</label>
+          <label class="option"><input type="radio" name="b3q12" value="4"> Ar</label>
+          <div class="explain">Дұрыс жауап: C. Электрон саны: 2+2+6+2+4=16, Z=16 — күкірт.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>13. 1s²2s²2p⁶3s²3p⁶4s² конфигурациясы қай блок элементіне жатады?</p>
+          <label class="option"><input type="radio" name="b3q13" value="0"> s-блок</label>
+          <label class="option"><input type="radio" name="b3q13" value="1"> p-блок</label>
+          <label class="option"><input type="radio" name="b3q13" value="2"> d-блок</label>
+          <label class="option"><input type="radio" name="b3q13" value="3"> f-блок</label>
+          <label class="option"><input type="radio" name="b3q13" value="4"> Ядролық блок</label>
+          <div class="explain">Дұрыс жауап: A. Соңғы электрон 4s-деңгейшеде орналасқан, сондықтан s-блок.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>14. 3p⁵ сыртқы конфигурациясы бар элементтің валенттік электрон саны:</p>
+          <label class="option"><input type="radio" name="b3q14" value="0"> 3</label>
+          <label class="option"><input type="radio" name="b3q14" value="1"> 5</label>
+          <label class="option"><input type="radio" name="b3q14" value="2"> 6</label>
+          <label class="option"><input type="radio" name="b3q14" value="3"> 7</label>
+          <label class="option"><input type="radio" name="b3q14" value="4"> 8</label>
+          <div class="explain">Дұрыс жауап: D. Сыртқы қабат толық түрде 3s²3p⁵ болады: 2+5=7 валенттік электрон.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>15. Ca атомы мен Ca²⁺ ионының электрондық құрылымын салыстыру. Ca үшін Z=20.</p>
+          <label class="option"><input type="radio" name="b3q15" value="0"> Ca²⁺ ионында 22 электрон бар</label>
+          <label class="option"><input type="radio" name="b3q15" value="1"> Ca²⁺ ионында 18 электрон бар, ол Ar конфигурациясына ұқсас</label>
+          <label class="option"><input type="radio" name="b3q15" value="2"> Ca²⁺ ионында 20 электрон бар, атоммен бірдей</label>
+          <label class="option"><input type="radio" name="b3q15" value="3"> Ca²⁺ ионында 16 электрон бар, ол S конфигурациясына ұқсас</label>
+          <label class="option"><input type="radio" name="b3q15" value="4"> Ca²⁺ ионында 21 электрон бар, ол Sc конфигурациясына ұқсас</label>
+          <div class="explain">Дұрыс жауап: B. Ca: [Ar]4s², Ca²⁺ екі 4s электронын беріп, [Ar] конфигурациясына өтеді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>16. Қай тұжырым электрондық құрылым бойынша дұрыс?</p>
+          <label class="option"><input type="radio" name="b3q16" value="0"> p-деңгейшеде 5 орбиталь болады</label>
+          <label class="option"><input type="radio" name="b3q16" value="1"> d-деңгейшеге ең көп 6 электрон сыяды</label>
+          <label class="option"><input type="radio" name="b3q16" value="2"> Бір орбитальда ең көп 4 электрон орналасады</label>
+          <label class="option"><input type="radio" name="b3q16" value="3"> s-деңгейше 3 орбитальдан тұрады</label>
+          <label class="option"><input type="radio" name="b3q16" value="4"> Бір орбитальда қарама-қарсы спинді ең көп 2 электрон болады</label>
+          <div class="explain">Дұрыс жауап: E. Бұл Паули принципіне сәйкес келеді.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block3')">Тестті тексеру</button>
+      </div>
+    </section>
+        <section id="block4" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">4</div>
+        <div>
+          <h2>Химиялық байланыс және молекула құрылысы</h2>
+          <p>
+            Химиялық байланыстың табиғаты, иондық, коваленттік, металдық және сутектік
+            байланыс, полюсті және полюссіз байланыс, донор-акцепторлық механизм,
+            гибридтену, молекула пішіні және байланыс полярлығы.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block4', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block4', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block4', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block4', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Химиялық байланыс ұғымы</summary>
+          <p>
+            Химиялық байланыс — атомдарды молекула, ион, кристалл немесе басқа
+            бөлшек құрамында біріктіріп ұстайтын әрекеттесу. Байланыс түзілуі кезінде
+            жүйенің энергиясы төмендеп, тұрақтырақ күй қалыптасады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Байланыстың электрондық табиғаты</summary>
+          <p>
+            Химиялық байланыс көбіне сыртқы электрондардың қатысуымен түзіледі.
+            Атомдар электрон беру, электрон қосып алу немесе ортақ электрон жұбын
+            түзу арқылы тұрақты электрондық күйге ұмтылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Иондық байланыс</summary>
+          <p>
+            Иондық байланыс электрон толық дерлік бір атомнан екінші атомға ауысқанда
+            түзіледі. Нәтижесінде катион мен анион пайда болып, олар электростатикалық
+            тартылыс арқылы байланысады. Мұндай байланыс көбіне металл мен бейметалл
+            арасында түзіледі.
+          </p>
+        </details>
+
+        <details>
+          <summary>Коваленттік байланыс</summary>
+          <p>
+            Коваленттік байланыс атомдардың ортақ электрон жұбын түзуі арқылы пайда
+            болады. Бұл байланыс көбіне бейметалл атомдары арасында түзіледі.
+            Коваленттік байланыс полюссіз немесе полюсті болуы мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Полюссіз коваленттік байланыс</summary>
+          <p>
+            Полюссіз коваленттік байланыс электртерістілігі бірдей немесе өте жақын
+            атомдар арасында түзіледі. Ортақ электрон жұбы екі атом арасында шамамен
+            бірдей тартылады. Мысалы, H₂, Cl₂, N₂ молекулаларындағы байланыстар.
+          </p>
+        </details>
+
+        <details>
+          <summary>Полюсті коваленттік байланыс</summary>
+          <p>
+            Полюсті коваленттік байланыс электртерістілігі әртүрлі бейметалл атомдары
+            арасында түзіледі. Ортақ электрон жұбы электртерістігі жоғары атомға қарай
+            ығысады. Мысалы, HCl, H₂O, NH₃ молекулаларындағы байланыстар.
+          </p>
+        </details>
+
+        <details>
+          <summary>Донор-акцепторлық байланыс</summary>
+          <p>
+            Донор-акцепторлық байланыста ортақ электрон жұбын бір атом немесе ион
+            береді. Электрон жұбын беретін бөлшек донор, ал бос орбиталі арқылы оны
+            қабылдайтын бөлшек акцептор деп аталады. Мұндай механизм комплекс
+            қосылыстар мен аммоний ионында кездеседі.
+          </p>
+        </details>
+
+        <details>
+          <summary>Металдық байланыс</summary>
+          <p>
+            Металдық байланыс металл катиондары мен еркін қозғала алатын электрондар
+            арасындағы әрекеттесуге негізделеді. Осы байланыс металдардың электр және
+            жылу өткізгіштігін, иілімділігін, созылғыштығын түсіндіреді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Сутектік байланыс</summary>
+          <p>
+            Сутектік байланыс сутек атомы жоғары электртерісті атоммен байланысқан
+            кезде және басқа электртерісті атоммен қосымша тартылыс түзгенде пайда
+            болады. Ол су, спирттер, аммиак, фторсутек сияқты жүйелерде маңызды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Байланыс ұзындығы және энергиясы</summary>
+          <p>
+            Байланыс ұзындығы — байланысқан атом ядроларының арақашықтығы.
+            Байланыс энергиясы — байланысты үзуге қажет энергия. Байланыс энергиясы
+            неғұрлым үлкен болса, байланыс соғұрлым берік болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Сигма және пи байланыстар</summary>
+          <p>
+            Сигма байланыс орбитальдардың ядроларды қосатын ось бойымен қабысуы арқылы
+            түзіледі. Пи байланыс орбитальдардың бүйірлей қабысуы арқылы түзіледі.
+            Қос байланыста бір сигма және бір пи байланыс, үш байланыста бір сигма
+            және екі пи байланыс болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Гибридтену</summary>
+          <p>
+            Гибридтену — атом орбитальдарының араласып, бірдей энергиялы және белгілі
+            бағытталған гибрид орбитальдар түзуі. sp-гибридтену сызықтық, sp² —
+            жазық үшбұрышты, sp³ — тетраэдрлік орналасуға әкеледі.
+          </p>
+        </details>
+
+        <details>
+          <summary>Молекула пішіні</summary>
+          <p>
+            Молекула пішіні орталық атом айналасындағы байланысқан атомдар мен
+            бөлінбеген электрон жұптарының орналасуына тәуелді. Мысалы, CO₂ молекуласы
+            сызықтық, BF₃ жазық үшбұрышты, CH₄ тетраэдрлік, NH₃ үшбұрышты пирамида,
+            H₂O бұрыштық пішінді.
+          </p>
+        </details>
+
+        <details>
+          <summary>КТ үшін маңызды дағды</summary>
+          <p>
+            Байланыс түрін анықтау, электртерістілік айырмасына қарай полярлықты
+            болжау, сигма және пи байланыстарды санау, гибридтену түрін табу,
+            молекула пішінін тану және зат қасиетін байланыс түрімен түсіндіру маңызды.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Иондық байланыс → катион + анион</div>
+          <div class="formula">Коваленттік байланыс → ортақ электрон жұбы</div>
+          <div class="formula">Полюссіз байланыс → Δχ ≈ 0</div>
+          <div class="formula">Полюсті байланыс → Δχ орташа</div>
+          <div class="formula">Иондық сипат → Δχ үлкен</div>
+          <div class="formula">Металдық байланыс → металл катиондары + еркін электрондар</div>
+          <div class="formula">Донор → электрон жұбын береді</div>
+          <div class="formula">Акцептор → электрон жұбын қабылдайды</div>
+          <div class="formula">Бір байланыс → 1 σ</div>
+          <div class="formula">Қос байланыс → 1 σ + 1 π</div>
+          <div class="formula">Үш байланыс → 1 σ + 2 π</div>
+          <div class="formula">sp → сызықтық → 180°</div>
+          <div class="formula">sp² → жазық үшбұрышты → 120°</div>
+          <div class="formula">sp³ → тетраэдрлік → 109,5°</div>
+          <div class="formula">CO₂ → сызықтық</div>
+          <div class="formula">CH₄ → тетраэдрлік</div>
+          <div class="formula">NH₃ → үшбұрышты пирамида</div>
+          <div class="formula">H₂O → бұрыштық</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Химиялық байланыс</b>
+            <p>Атомдарды тұрақты бөлшек құрамында біріктіріп ұстайтын әрекеттесу.</p>
+          </div>
+
+          <div class="term">
+            <b>Иондық байланыс</b>
+            <p>Қарама-қарсы зарядталған иондардың электростатикалық тартылысы.</p>
+          </div>
+
+          <div class="term">
+            <b>Коваленттік байланыс</b>
+            <p>Ортақ электрон жұбы арқылы түзілетін байланыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Полюссіз байланыс</b>
+            <p>Ортақ электрон жұбы екі атом арасында шамамен бірдей таралған байланыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Полюсті байланыс</b>
+            <p>Ортақ электрон жұбы электртерістігі жоғары атомға қарай ығысқан байланыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Донор</b>
+            <p>Донор-акцепторлық байланыста электрон жұбын беретін бөлшек.</p>
+          </div>
+
+          <div class="term">
+            <b>Акцептор</b>
+            <p>Донор берген электрон жұбын бос орбиталі арқылы қабылдайтын бөлшек.</p>
+          </div>
+
+          <div class="term">
+            <b>Металдық байланыс</b>
+            <p>Металл катиондары мен еркін электрондар арасындағы байланыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Сутектік байланыс</b>
+            <p>Сутек атомы мен электртерісті атомдар арасында түзілетін қосымша тартылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Сигма байланыс</b>
+            <p>Орбитальдардың ядроларды қосатын ось бойымен қабысуынан түзілетін байланыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Пи байланыс</b>
+            <p>Орбитальдардың бүйірлей қабысуынан түзілетін байланыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Гибридтену</b>
+            <p>Атом орбитальдарының араласып, бағытталған гибрид орбитальдар түзуі.</p>
+          </div>
+
+          <div class="term">
+            <b>Байланыс энергиясы</b>
+            <p>Химиялық байланысты үзуге қажет энергия.</p>
+          </div>
+
+          <div class="term">
+            <b>Байланыс ұзындығы</b>
+            <p>Байланысқан атом ядроларының арақашықтығы.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block4Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Иондық байланысқа сәйкес келетін сипаттама:</p>
+          <label class="option"><input type="radio" name="b4q1" value="0"> Ортақ электрон жұбы екі бірдей бейметалл арасында тең таралады</label>
+          <label class="option"><input type="radio" name="b4q1" value="1"> Металл атомдарының еркін электрондармен жалпы тор түзуі</label>
+          <label class="option"><input type="radio" name="b4q1" value="2"> Қарама-қарсы зарядталған иондардың электростатикалық тартылысы</label>
+          <label class="option"><input type="radio" name="b4q1" value="3"> Сутек атомының басқа сутек атомымен әлсіз әрекеттесуі</label>
+          <label class="option"><input type="radio" name="b4q1" value="4"> Бір атомның бос орбиталіне электрон жұбының уақытша ығысуы ғана</label>
+          <div class="explain">Дұрыс жауап: C. Иондық байланыс катион мен анион арасындағы электростатикалық тартылысқа негізделеді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Коваленттік байланыстың негізгі белгісі:</p>
+          <label class="option"><input type="radio" name="b4q2" value="0"> Электрондардың металл торында еркін қозғалуы</label>
+          <label class="option"><input type="radio" name="b4q2" value="1"> Атомдардың толық иондарға айналып, тек зарядпен тартылуы</label>
+          <label class="option"><input type="radio" name="b4q2" value="2"> Протондардың ядродан ядроға ауысуы</label>
+          <label class="option"><input type="radio" name="b4q2" value="3"> Нейтрондардың ортақ жұп түзуі</label>
+          <label class="option"><input type="radio" name="b4q2" value="4"> Атомдардың ортақ электрон жұбын түзуі</label>
+          <div class="explain">Дұрыс жауап: E. Коваленттік байланыс ортақ электрон жұбы арқылы түзіледі.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. H₂ молекуласындағы байланыс түрі:</p>
+          <label class="option"><input type="radio" name="b4q3" value="0"> Полюссіз коваленттік</label>
+          <label class="option"><input type="radio" name="b4q3" value="1"> Полюсті коваленттік</label>
+          <label class="option"><input type="radio" name="b4q3" value="2"> Иондық</label>
+          <label class="option"><input type="radio" name="b4q3" value="3"> Металдық</label>
+          <label class="option"><input type="radio" name="b4q3" value="4"> Донор-акцепторлық иондық</label>
+          <div class="explain">Дұрыс жауап: A. H₂ молекуласында екі бірдей атом бар, электртерістілік айырмасы жоқ, байланыс полюссіз.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. HCl молекуласындағы байланыс түрі:</p>
+          <label class="option"><input type="radio" name="b4q4" value="0"> Полюссіз коваленттік</label>
+          <label class="option"><input type="radio" name="b4q4" value="1"> Металдық</label>
+          <label class="option"><input type="radio" name="b4q4" value="2"> Таза иондық торлық байланыс</label>
+          <label class="option"><input type="radio" name="b4q4" value="3"> Полюсті коваленттік</label>
+          <label class="option"><input type="radio" name="b4q4" value="4"> Тек сутектік байланыс</label>
+          <div class="explain">Дұрыс жауап: D. H және Cl электртерістілігі әртүрлі, ортақ электрон жұбы Cl жағына ығысады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. NaCl кристалындағы негізгі байланыс түрі:</p>
+          <label class="option"><input type="radio" name="b4q5" value="0"> Полюссіз коваленттік</label>
+          <label class="option"><input type="radio" name="b4q5" value="1"> Иондық</label>
+          <label class="option"><input type="radio" name="b4q5" value="2"> Металдық</label>
+          <label class="option"><input type="radio" name="b4q5" value="3"> Сутектік</label>
+          <label class="option"><input type="radio" name="b4q5" value="4"> Пи байланыс қана</label>
+          <div class="explain">Дұрыс жауап: B. Na электрон беріп Na⁺, Cl электрон қосып алып Cl⁻ түзеді; иондар тартылысады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Металдық байланысты түсіндіретін дұрыс сипаттама:</p>
+          <label class="option"><input type="radio" name="b4q6" value="0"> Екі бейметалл атомының электрон жұбын тең бөлісуі</label>
+          <label class="option"><input type="radio" name="b4q6" value="1"> Анион мен катионның молекула ішінде ғана жұптасуы</label>
+          <label class="option"><input type="radio" name="b4q6" value="2"> Сутек пен фтор арасындағы молекулааралық тартылыс</label>
+          <label class="option"><input type="radio" name="b4q6" value="3"> Бір атомның электрон жұбын бос орбитальға беруі</label>
+          <label class="option"><input type="radio" name="b4q6" value="4"> Металл катиондары мен еркін электрондар арасындағы әрекеттесу</label>
+          <div class="explain">Дұрыс жауап: E. Металдық байланыс металдардың электрөткізгіштігін және иілімділігін түсіндіреді.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Сутектік байланыс айқын байқалатын зат:</p>
+          <label class="option"><input type="radio" name="b4q7" value="0"> CH₄</label>
+          <label class="option"><input type="radio" name="b4q7" value="1"> NaCl</label>
+          <label class="option"><input type="radio" name="b4q7" value="2"> H₂O</label>
+          <label class="option"><input type="radio" name="b4q7" value="3"> CO₂</label>
+          <label class="option"><input type="radio" name="b4q7" value="4"> MgO</label>
+          <div class="explain">Дұрыс жауап: C. Су молекуласында O–H байланыстары бар және оттек жоғары электртерісті, сондықтан сутектік байланыс түзіледі.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Донор-акцепторлық байланыста донордың рөлі:</p>
+          <label class="option"><input type="radio" name="b4q8" value="0"> Ортақ байланысқа электрон жұбын береді</label>
+          <label class="option"><input type="radio" name="b4q8" value="1"> Электрон жұбын қабылдайтын бос орбиталь ұсынады</label>
+          <label class="option"><input type="radio" name="b4q8" value="2"> Ядро зарядын арттырады</label>
+          <label class="option"><input type="radio" name="b4q8" value="3"> Нейтрон санын өзгертеді</label>
+          <label class="option"><input type="radio" name="b4q8" value="4"> Байланысты тек иондық торға айналдырады</label>
+          <div class="explain">Дұрыс жауап: A. Донор — электрон жұбын беретін бөлшек; акцептор — оны қабылдайтын бөлшек.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Қос байланыстағы σ және π байланыстар саны:</p>
+          <label class="option"><input type="radio" name="b4q9" value="0"> 2σ және 0π</label>
+          <label class="option"><input type="radio" name="b4q9" value="1"> 0σ және 2π</label>
+          <label class="option"><input type="radio" name="b4q9" value="2"> 1σ және 2π</label>
+          <label class="option"><input type="radio" name="b4q9" value="3"> 1σ және 1π</label>
+          <label class="option"><input type="radio" name="b4q9" value="4"> 2σ және 1π</label>
+          <div class="explain">Дұрыс жауап: D. Қос байланыс бір сигма және бір пи байланыстан тұрады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Үш байланыстағы σ және π байланыстар саны:</p>
+          <label class="option"><input type="radio" name="b4q10" value="0"> 3σ және 0π</label>
+          <label class="option"><input type="radio" name="b4q10" value="1"> 1σ және 2π</label>
+          <label class="option"><input type="radio" name="b4q10" value="2"> 2σ және 1π</label>
+          <label class="option"><input type="radio" name="b4q10" value="3"> 0σ және 3π</label>
+          <label class="option"><input type="radio" name="b4q10" value="4"> 1σ және 1π</label>
+          <div class="explain">Дұрыс жауап: B. Үш байланыста бір σ және екі π байланыс болады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>11. sp-гибридтенуге сәйкес кеңістіктік пішін:</p>
+          <label class="option"><input type="radio" name="b4q11" value="0"> Тетраэдрлік</label>
+          <label class="option"><input type="radio" name="b4q11" value="1"> Бұрыштық</label>
+          <label class="option"><input type="radio" name="b4q11" value="2"> Үшбұрышты пирамида</label>
+          <label class="option"><input type="radio" name="b4q11" value="3"> Жазық үшбұрышты</label>
+          <label class="option"><input type="radio" name="b4q11" value="4"> Сызықтық</label>
+          <div class="explain">Дұрыс жауап: E. sp-гибридтену кезінде орбитальдар 180° бұрышпен орналасады.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>12. sp²-гибридтенуге тән байланыс бұрышы:</p>
+          <label class="option"><input type="radio" name="b4q12" value="0"> 90°</label>
+          <label class="option"><input type="radio" name="b4q12" value="1"> 109,5°</label>
+          <label class="option"><input type="radio" name="b4q12" value="2"> 120°</label>
+          <label class="option"><input type="radio" name="b4q12" value="3"> 180°</label>
+          <label class="option"><input type="radio" name="b4q12" value="4"> 60°</label>
+          <div class="explain">Дұрыс жауап: C. sp²-гибридтенуде орбитальдар жазық үшбұрышты бағытталады, бұрыш шамамен 120°.</div>
+        </div>
+
+          <section id="block5" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">5</div>
+        <div>
+          <h2>Зат құрылысы және кристалдық торлар</h2>
+          <p>
+            Заттың агрегаттық күйі, кристалдық және аморфты заттар, иондық,
+            атомдық, молекулалық және металдық кристалдық торлар, тор түйіндері,
+            зат қасиеттерінің құрылыммен байланысы.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block5', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block5', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block5', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block5', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Зат құрылысының маңызы</summary>
+          <p>
+            Заттың физикалық және химиялық қасиеттері оның құрамына ғана емес,
+            бөлшектерінің кеңістікте орналасуына және олардың арасындағы байланыс
+            түріне де тәуелді. Сондықтан зат құрылысын білу балқу температурасы,
+            қаттылық, ерігіштік, электрөткізгіштік сияқты қасиеттерді түсіндіруге
+            мүмкіндік береді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Кристалдық заттар</summary>
+          <p>
+            Кристалдық заттарда бөлшектер белгілі бір ретпен орналасады және кристалдық
+            тор түзеді. Кристалдық торда атомдар, иондар немесе молекулалар кеңістікте
+            қайталанатын тәртіппен орналасады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Аморфты заттар</summary>
+          <p>
+            Аморфты заттарда бөлшектердің ұзақ қашықтықтағы қатаң реттелген орналасуы
+            болмайды. Шыны, кейбір полимерлер және шайырлар аморфты заттарға мысал
+            бола алады. Аморфты заттар белгілі бір нақты балқу температурасынан гөрі
+            біртіндеп жұмсарады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Кристалдық тор ұғымы</summary>
+          <p>
+            Кристалдық тор — бөлшектердің кеңістікте заңды және қайталанатын тәртіппен
+            орналасу жүйесі. Тор түйіндерінде иондар, атомдар немесе молекулалар
+            орналасуы мүмкін. Тор түрі заттың негізгі қасиеттерін анықтайды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Иондық кристалдық тор</summary>
+          <p>
+            Иондық кристалдық торда түйіндерде катиондар мен аниондар орналасады.
+            Олар электростатикалық тартылыс арқылы байланысады. Мұндай заттар әдетте
+            қатты, морт, балқу температурасы жоғары болады. Балқыған күйде немесе
+            сулы ерітіндіде электр тогын өткізе алады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Иондық торға мысалдар</summary>
+          <p>
+            NaCl, KBr, MgO, CaO сияқты заттар иондық тор түзеді. Бұл заттарда жеке
+            молекула болмайды, бүкіл кристалл қарама-қарсы зарядталған иондардан
+            құралған кеңістіктік тор ретінде қарастырылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Атомдық кристалдық тор</summary>
+          <p>
+            Атомдық кристалдық торда тор түйіндерінде атомдар орналасады және олар
+            берік коваленттік байланыстармен байланысқан. Мұндай заттар өте қатты,
+            балқу температурасы жоғары және көбіне ерімейтін болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Атомдық торға мысалдар</summary>
+          <p>
+            Алмаз, кремний, кварц және кремний карбиді атомдық кристалдық торға
+            жатады. Алмазда көміртек атомдары кеңістікте өте берік коваленттік
+            байланыстар арқылы байланысқандықтан, ол өте қатты зат.
+          </p>
+        </details>
+
+        <details>
+          <summary>Молекулалық кристалдық тор</summary>
+          <p>
+            Молекулалық кристалдық торда тор түйіндерінде молекулалар орналасады.
+            Молекулалар арасындағы күштер салыстырмалы әлсіз болғандықтан, мұндай
+            заттардың балқу және қайнау температуралары төмен болады. Олар көбіне
+            ұшқыш немесе жұмсақ болуы мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Молекулалық торға мысалдар</summary>
+          <p>
+            I₂, CO₂ қатты күйі, мұз, күкірт, фосфор және кейбір органикалық заттар
+            молекулалық кристалдық тор түзе алады. Мұндай заттарда молекула ішінде
+            коваленттік байланыс берік, ал молекулааралық әрекеттесу әлсіз болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Металдық кристалдық тор</summary>
+          <p>
+            Металдық торда металл катиондары мен еркін қозғала алатын электрондар
+            болады. Бұл құрылым металдарға электр және жылу өткізгіштік, металдық
+            жылтыр, иілімділік және созылғыштық қасиеттерін береді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Графит пен алмаз айырмашылығы</summary>
+          <p>
+            Графит пен алмаз көміртектің аллотропиялық түрлері. Алмазда әр көміртек
+            атомы төрт көрші атоммен берік коваленттік байланыс түзеді. Графитте
+            көміртек атомдары қабаттар түзеді, қабаттар арасындағы әрекеттесу әлсіз,
+            сондықтан графит жұмсақ және электр тогын өткізе алады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Қасиеттерді тор түрімен түсіндіру</summary>
+          <p>
+            Заттың қаттылығы, балқу температурасы, ерігіштігі және электрөткізгіштігі
+            кристалдық тор түріне тәуелді. Иондық заттар қатты күйде ток өткізбейді,
+            себебі иондар торда бекітілген; балқығанда немесе ерігенде иондар қозғалып,
+            электр тогын өткізе алады.
+          </p>
+        </details>
+
+        <details>
+          <summary>КТ үшін маңызды дағды</summary>
+          <p>
+            Заттың формуласына немесе қасиетіне қарап кристалдық тор түрін анықтау,
+            тор түрі арқылы балқу температурасы мен электрөткізгіштікті түсіндіру,
+            алмаз, графит, NaCl, металдар және молекулалық заттарды салыстыру маңызды.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Кристалдық тор → бөлшектердің реттелген орналасуы</div>
+          <div class="formula">Иондық тор → катиондар + аниондар</div>
+          <div class="formula">Атомдық тор → атомдар + коваленттік байланыс</div>
+          <div class="formula">Молекулалық тор → молекулалар + әлсіз молекулааралық күштер</div>
+          <div class="formula">Металдық тор → металл катиондары + еркін электрондар</div>
+          <div class="formula">NaCl → иондық тор</div>
+          <div class="formula">MgO → иондық тор</div>
+          <div class="formula">Алмаз → атомдық тор</div>
+          <div class="formula">SiO₂ → атомдық тор</div>
+          <div class="formula">I₂ → молекулалық тор</div>
+          <div class="formula">CO₂ қатты күйі → молекулалық тор</div>
+          <div class="formula">Fe, Cu, Al → металдық тор</div>
+          <div class="formula">Иондық зат қатты күйде → ток өткізбейді</div>
+          <div class="formula">Иондық зат балқығанда/ерігенде → ток өткізеді</div>
+          <div class="formula">Атомдық тор → жоғары балқу, жоғары қаттылық</div>
+          <div class="formula">Молекулалық тор → төмен балқу, ұшқыштық</div>
+          <div class="formula">Металдық тор → электрөткізгіштік</div>
+          <div class="formula">Графит → қабатты құрылым, электрөткізгіш</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Кристалдық зат</b>
+            <p>Бөлшектері кеңістікте реттеліп орналасқан қатты зат.</p>
+          </div>
+
+          <div class="term">
+            <b>Аморфты зат</b>
+            <p>Бөлшектерінің ұзақ қашықтықта қатаң реті жоқ қатты зат.</p>
+          </div>
+
+          <div class="term">
+            <b>Кристалдық тор</b>
+            <p>Бөлшектердің кеңістікте қайталанатын тәртіппен орналасу жүйесі.</p>
+          </div>
+
+          <div class="term">
+            <b>Тор түйіні</b>
+            <p>Кристалдық торда бөлшек орналасатын нүкте.</p>
+          </div>
+
+          <div class="term">
+            <b>Иондық тор</b>
+            <p>Катиондар мен аниондардан құралған кристалдық тор.</p>
+          </div>
+
+          <div class="term">
+            <b>Атомдық тор</b>
+            <p>Коваленттік байланысқан атомдардан құралған кеңістіктік тор.</p>
+          </div>
+
+          <div class="term">
+            <b>Молекулалық тор</b>
+            <p>Түйіндерінде молекулалар орналасқан кристалдық тор.</p>
+          </div>
+
+          <div class="term">
+            <b>Металдық тор</b>
+            <p>Металл катиондары мен еркін электрондардан тұратын тор.</p>
+          </div>
+
+          <div class="term">
+            <b>Аллотропия</b>
+            <p>Бір элементтің бірнеше жай зат түрінде болуы.</p>
+          </div>
+
+          <div class="term">
+            <b>Алмаз</b>
+            <p>Көміртектің өте қатты, атомдық торлы аллотропиялық түрі.</p>
+          </div>
+
+          <div class="term">
+            <b>Графит</b>
+            <p>Көміртектің қабатты құрылымды, электрөткізгіш аллотропиялық түрі.</p>
+          </div>
+
+          <div class="term">
+            <b>Электрөткізгіштік</b>
+            <p>Заттың электр тогын өткізу қабілеті.</p>
+          </div>
+
+          <div class="term">
+            <b>Балқу температурасы</b>
+            <p>Қатты заттың сұйық күйге өтетін температурасы.</p>
+          </div>
+
+          <div class="term">
+            <b>Морттық</b>
+            <p>Заттың соққы әсерінен оңай сыну қасиеті.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block5Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Кристалдық тор ұғымына сәйкес келетін анықтама:</p>
+          <label class="option"><input type="radio" name="b5q1" value="0"> Газ молекулаларының ретсіз қозғалыс жылдамдығы</label>
+          <label class="option"><input type="radio" name="b5q1" value="1"> Электрондардың ядро ішіндегі орналасу реті</label>
+          <label class="option"><input type="radio" name="b5q1" value="2"> Бөлшектердің кеңістікте заңды қайталанатын орналасу жүйесі</label>
+          <label class="option"><input type="radio" name="b5q1" value="3"> Ерітіндідегі иондардың кездейсоқ соқтығысуы</label>
+          <label class="option"><input type="radio" name="b5q1" value="4"> Молекула массасының изотоптар бойынша таралуы</label>
+          <div class="explain">Дұрыс жауап: C. Кристалдық торда бөлшектер белгілі тәртіппен қайталанып орналасады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Иондық кристалдық торға сәйкес сипаттама:</p>
+          <label class="option"><input type="radio" name="b5q2" value="0"> Түйіндерінде бейтарап молекулалар ғана орналасады</label>
+          <label class="option"><input type="radio" name="b5q2" value="1"> Атомдар тұтас коваленттік кеңістіктік тор түзеді</label>
+          <label class="option"><input type="radio" name="b5q2" value="2"> Металл катиондары еркін электрондармен қоршалады</label>
+          <label class="option"><input type="radio" name="b5q2" value="3"> Бөлшектердің ұзақ қашықтықтағы реті болмайды</label>
+          <label class="option"><input type="radio" name="b5q2" value="4"> Түйіндерінде катиондар мен аниондар орналасады</label>
+          <div class="explain">Дұрыс жауап: E. Иондық тор қарама-қарсы зарядталған иондардың тартылысына негізделеді.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Иондық кристалдық торға жататын зат:</p>
+          <label class="option"><input type="radio" name="b5q3" value="0"> NaCl</label>
+          <label class="option"><input type="radio" name="b5q3" value="1"> I₂</label>
+          <label class="option"><input type="radio" name="b5q3" value="2"> CO₂ қатты күйі</label>
+          <label class="option"><input type="radio" name="b5q3" value="3"> Алмаз</label>
+          <label class="option"><input type="radio" name="b5q3" value="4"> Cu</label>
+          <div class="explain">Дұрыс жауап: A. NaCl кристалында Na⁺ және Cl⁻ иондары орналасады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Атомдық кристалдық торға тән қасиет:</p>
+          <label class="option"><input type="radio" name="b5q4" value="0"> Балқу температурасы төмен және өте ұшқыш болады</label>
+          <label class="option"><input type="radio" name="b5q4" value="1"> Қатты күйде де, ерітіндіде де тек молекулааралық күштермен ұсталады</label>
+          <label class="option"><input type="radio" name="b5q4" value="2"> Құрамында катиондар мен аниондар ғана болады</label>
+          <label class="option"><input type="radio" name="b5q4" value="3"> Берік коваленттік байланыстарға байланысты қатты және жоғары балқитын болады</label>
+          <label class="option"><input type="radio" name="b5q4" value="4"> Барлық атомдары еркін электрон теңізінде қозғалады</label>
+          <div class="explain">Дұрыс жауап: D. Атомдық торда барлық атомдар кеңістікте коваленттік байланыспен байланысқан.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Атомдық кристалдық торға мысал:</p>
+          <label class="option"><input type="radio" name="b5q5" value="0"> NaCl</label>
+          <label class="option"><input type="radio" name="b5q5" value="1"> Алмаз</label>
+          <label class="option"><input type="radio" name="b5q5" value="2"> I₂</label>
+          <label class="option"><input type="radio" name="b5q5" value="3"> H₂O сұйық күйі</label>
+          <label class="option"><input type="radio" name="b5q5" value="4"> Al</label>
+          <div class="explain">Дұрыс жауап: B. Алмазда көміртек атомдары үшөлшемді коваленттік тор түзеді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Молекулалық кристалдық торға тән белгі:</p>
+          <label class="option"><input type="radio" name="b5q6" value="0"> Катиондар мен аниондар өте берік электростатикалық тартылыспен байланысады</label>
+          <label class="option"><input type="radio" name="b5q6" value="1"> Барлық атомдар біртұтас коваленттік тор түзеді</label>
+          <label class="option"><input type="radio" name="b5q6" value="2"> Еркін электрондар металдық өткізгіштік береді</label>
+          <label class="option"><input type="radio" name="b5q6" value="3"> Ядро құрамындағы бөлшектер тор түйіндерінде орналасады</label>
+          <label class="option"><input type="radio" name="b5q6" value="4"> Түйіндерінде молекулалар орналасып, молекулааралық күштермен ұсталады</label>
+          <div class="explain">Дұрыс жауап: E. Молекулалық торда молекулалар арасындағы күштер салыстырмалы әлсіз болады.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Молекулалық кристалдық торға жататын зат:</p>
+          <label class="option"><input type="radio" name="b5q7" value="0"> MgO</label>
+          <label class="option"><input type="radio" name="b5q7" value="1"> SiO₂</label>
+          <label class="option"><input type="radio" name="b5q7" value="2"> I₂</label>
+          <label class="option"><input type="radio" name="b5q7" value="3"> Fe</label>
+          <label class="option"><input type="radio" name="b5q7" value="4"> NaCl</label>
+          <div class="explain">Дұрыс жауап: C. Қатты иодта I₂ молекулалары молекулааралық күштермен ұсталады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Металдық кристалдық торға тән қасиет:</p>
+          <label class="option"><input type="radio" name="b5q8" value="0"> Электр және жылу өткізгіштік</label>
+          <label class="option"><input type="radio" name="b5q8" value="1"> Ерітіндіде ғана иондық өткізгіштік</label>
+          <label class="option"><input type="radio" name="b5q8" value="2"> Өте төмен балқу және жоғары ұшқыштық</label>
+          <label class="option"><input type="radio" name="b5q8" value="3"> Молекулалар арасындағы әлсіз күштер ғана</label>
+          <label class="option"><input type="radio" name="b5q8" value="4"> Ядро зарядының химиялық реакцияда өзгеруі</label>
+          <div class="explain">Дұрыс жауап: A. Металдық торда еркін электрондар болғандықтан металдар ток пен жылуды жақсы өткізеді.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Қай зат металдық кристалдық тор түзеді?</p>
+          <label class="option"><input type="radio" name="b5q9" value="0"> NaCl</label>
+          <label class="option"><input type="radio" name="b5q9" value="1"> Алмаз</label>
+          <label class="option"><input type="radio" name="b5q9" value="2"> I₂</label>
+          <label class="option"><input type="radio" name="b5q9" value="3"> Cu</label>
+          <label class="option"><input type="radio" name="b5q9" value="4"> CO₂</label>
+          <div class="explain">Дұрыс жауап: D. Cu — металл, оның кристалында металдық байланыс болады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Қатты NaCl электр тогын неге өткізбейді?</p>
+          <label class="option"><input type="radio" name="b5q10" value="0"> NaCl құрамында иондар мүлде болмайды</label>
+          <label class="option"><input type="radio" name="b5q10" value="1"> Иондар кристалдық торда бекітілген және еркін қозғала алмайды</label>
+          <label class="option"><input type="radio" name="b5q10" value="2"> NaCl тек молекулалық тор түзеді</label>
+          <label class="option"><input type="radio" name="b5q10" value="3"> Электрондар металдық торда еркін қозғалады</label>
+          <label class="option"><input type="radio" name="b5q10" value="4"> NaCl атомдық коваленттік тор түзеді</label>
+          <div class="explain">Дұрыс жауап: B. Қатты иондық кристалда иондар орындарында бекітілген, сондықтан заряд тасымалдай алмайды.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>11. NaCl балқығанда немесе суда ерігенде электр тогын неге өткізеді?</p>
+          <label class="option"><input type="radio" name="b5q11" value="0"> Молекулалар бейтарап күйде күшейеді</label>
+          <label class="option"><input type="radio" name="b5q11" value="1"> Коваленттік байланыстар электрон жұбын толық жоғалтады</label>
+          <label class="option"><input type="radio" name="b5q11" value="2"> Протондар ядродан шығып кетеді</label>
+          <label class="option"><input type="radio" name="b5q11" value="3"> Металдық электрондар пайда болады</label>
+          <label class="option"><input type="radio" name="b5q11" value="4"> Иондар еркін қозғалып, заряд тасымалдай алады</label>
+          <div class="explain">Дұрыс жауап: E. Балқығанда немесе ерігенде иондар қозғалмалы болады.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>12. Алмаз бен графиттің бір элементтен тұрып, қасиеттерінің әртүрлі болуы немен түсіндіріледі?</p>
+          <label class="option"><input type="radio" name="b5q12" value="0"> Олардың атомдық нөмірлері әртүрлі</label>
+          <label class="option"><input type="radio" name="b5q12" value="1"> Біреуінде протон жоқ, екіншісінде нейтрон жоқ</label>
+          <label class="option"><input type="radio" name="b5q12" value="2"> Көміртек атомдарының кеңістікте әртүрлі байланысуымен</label>
+          <label class="option"><input type="radio" name="b5q12" value="3"> Екеуі де иондық тор түзетіндігімен</label>
+          <label class="option"><input type="radio" name="b5q12" value="4"> Екеуі де молекулалық газ болғандықтан</label>
+          <div class="explain">Дұрыс жауап: C. Алмаз және графит — көміртектің аллотропиялық түрлері, құрылымы әртүрлі.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>13. Графиттің электр тогын өткізу себебі:</p>
+          <label class="option"><input type="radio" name="b5q13" value="0"> Қабаттарда делокалданған электрондардың болуы</label>
+          <label class="option"><input type="radio" name="b5q13" value="1"> Иондардың суда еркін қозғалуымен ғана</label>
+          <label class="option"><input type="radio" name="b5q13" value="2"> Молекулалардың газ күйінде болуымен</label>
+          <label class="option"><input type="radio" name="b5q13" value="3"> Кристалл торында катиондар мен аниондардың алмасуымен</label>
+          <label class="option"><input type="radio" name="b5q13" value="4"> Электрондардың ядро ішінде қозғалуы арқылы</label>
+          <div class="explain">Дұрыс жауап: A. Графит қабаттарында π-электрондар делокалданып, электрөткізгіштік береді.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>14. Аморфты затқа сәйкес мысал:</p>
+          <label class="option"><input type="radio" name="b5q14" value="0"> NaCl кристалы</label>
+          <label class="option"><input type="radio" name="b5q14" value="1"> Алмаз</label>
+          <label class="option"><input type="radio" name="b5q14" value="2"> Cu кристалы</label>
+          <label class="option"><input type="radio" name="b5q14" value="3"> Шыны</label>
+          <label class="option"><input type="radio" name="b5q14" value="4"> MgO кристалы</label>
+          <div class="explain">Дұрыс жауап: D. Шыныда ұзақ қашықтықтағы қатаң кристалдық рет болмайды.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>15. Қай қатарда зат пен кристалдық тор түрі дұрыс сәйкестендірілген?</p>
+          <label class="option"><input type="radio" name="b5q15" value="0"> NaCl — молекулалық, I₂ — металдық</label>
+          <label class="option"><input type="radio" name="b5q15" value="1"> Алмаз — атомдық, Cu — металдық</label>
+          <label class="option"><input type="radio" name="b5q15" value="2"> CO₂ қатты күйі — иондық, MgO — молекулалық</label>
+          <label class="option"><input type="radio" name="b5q15" value="3"> I₂ — атомдық, SiO₂ — металдық</label>
+          <label class="option"><input type="radio" name="b5q15" value="4"> Fe — молекулалық, NaCl — атомдық</label>
+          <div class="explain">Дұрыс жауап: B. Алмаз — атомдық тор, Cu — металдық тор түзеді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>16. Балқу температурасы төмен, ұшқыш болуы мүмкін заттарға тән тор түрі:</p>
+          <label class="option"><input type="radio" name="b5q16" value="0"> Атомдық кристалдық тор</label>
+          <label class="option"><input type="radio" name="b5q16" value="1"> Иондық кристалдық тор</label>
+          <label class="option"><input type="radio" name="b5q16" value="2"> Металдық кристалдық тор</label>
+          <label class="option"><input type="radio" name="b5q16" value="3"> Ядролық тор</label>
+          <label class="option"><input type="radio" name="b5q16" value="4"> Молекулалық кристалдық тор</label>
+          <div class="explain">Дұрыс жауап: E. Молекулалық торда молекулааралық күштер әлсіз болғандықтан, балқу температурасы төмен болады.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block5')">Тестті тексеру</button>
+      </div>
+    </section>
+        class="question" data-answer="0">
+          <p>13. CH₄ молекуласының пішіні және орталық атом гибридтенуі:</p>
+          <label class="option"><input type="radio" name="b4q13" value="0"> Тетраэдрлік, sp³</label>
+          <label class="option"><input type="radio" name="b4q13" value="1"> Сызықтық, sp</label>
+          <label class="option"><input type="radio" name="b4q13" value="2"> Жазық үшбұрышты, sp²</label>
+          <label class="option"><input type="radio" name="b4q13" value="3"> Бұрыштық, sp³</label>
+          <label class="option"><input type="radio" name="b4q13" value="4"> Үшбұрышты пирамида, sp²</label>
+          <div class="explain">Дұрыс жауап: A. CH₄ молекуласында көміртек 4 σ байланыс түзеді, пішіні тетраэдрлік, гибридтенуі sp³.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>14. CO₂ молекуласының пішіні:</p>
+          <label class="option"><input type="radio" name="b4q14" value="0"> Бұрыштық</label>
+          <label class="option"><input type="radio" name="b4q14" value="1"> Тетраэдрлік</label>
+          <label class="option"><input type="radio" name="b4q14" value="2"> Үшбұрышты пирамида</label>
+          <label class="option"><input type="radio" name="b4q14" value="3"> Сызықтық</label>
+          <label class="option"><input type="radio" name="b4q14" value="4"> Октаэдрлік</label>
+          <div class="explain">Дұрыс жауап: D. CO₂ молекуласында орталық көміртек екі бағытта байланысады, молекула сызықтық.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>15. H₂O молекуласының пішіні неге бұрыштық болады?</p>
+          <label class="option"><input type="radio" name="b4q15" value="0"> Себебі оттек атомында байланысқан атомдар жоқ</label>
+          <label class="option"><input type="radio" name="b4q15" value="1"> Себебі оттекте екі байланыс жұбы және екі бөлінбеген электрон жұбы бар</label>
+          <label class="option"><input type="radio" name="b4q15" value="2"> Себебі су молекуласында тек металдық байланыс бар</label>
+          <label class="option"><input type="radio" name="b4q15" value="3"> Себебі сутек атомдары электрон беріп катиондарға айналады</label>
+          <label class="option"><input type="radio" name="b4q15" value="4"> Себебі молекулада үш пи байланыс бар</label>
+          <div class="explain">Дұрыс жауап: B. Бөлінбеген электрон жұптары байланыс жұптарын ығыстырып, молекуланы бұрыштық етеді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>16. Қай қатарда байланыс түрі дұрыс сәйкестендірілген?</p>
+          <label class="option"><input type="radio" name="b4q16" value="0"> NaCl — полюссіз коваленттік, H₂ — иондық</label>
+          <label class="option"><input type="radio" name="b4q16" value="1"> Mg — сутектік, HCl — металдық</label>
+          <label class="option"><input type="radio" name="b4q16" value="2"> H₂O — металдық, Cu — коваленттік молекулалық</label>
+          <label class="option"><input type="radio" name="b4q16" value="3"> Cl₂ — иондық, Na — полюсті коваленттік</label>
+          <label class="option"><input type="radio" name="b4q16" value="4"> NaCl — иондық, HCl — полюсті коваленттік, Cu — металдық</label>
+          <div class="explain">Дұрыс жауап: E. NaCl иондық кристалл, HCl полюсті коваленттік молекула, Cu металдық байланысқа ие.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block4')">Тестті тексеру</button>
+      </div>
+    </section>
+      <section id="block6" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">6</div>
+        <div>
+          <h2>Химиялық термодинамика негіздері</h2>
+          <p>
+            Жүйе, орта, энергия, ішкі энергия, жылу, жұмыс, энтальпия, экзотермиялық
+            және эндотермиялық реакциялар, термохимиялық теңдеу, Гесс заңы,
+            энтропия және Гиббс энергиясы.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block6', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block6', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block6', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block6', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Химиялық термодинамиканың мәні</summary>
+          <p>
+            Химиялық термодинамика химиялық реакциялар мен физикалық процестердегі
+            энергия өзгерістерін зерттейді. Ол реакция кезінде жылу бөлінуін немесе
+            сіңірілуін, процестің өздігінен жүру мүмкіндігін және тепе-теңдік бағытын
+            түсіндіруге көмектеседі.
+          </p>
+        </details>
+
+        <details>
+          <summary>Жүйе және орта</summary>
+          <p>
+            Жүйе — зерттелетін зат немесе процестің бөлігі. Орта — жүйеден тыс қалған
+            қоршаған бөлік. Жүйе мен орта арасында энергия және зат алмасуы мүмкін.
+            Жүйенің түріне қарай ашық, жабық және оқшауланған жүйелер ажыратылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ашық, жабық және оқшауланған жүйе</summary>
+          <p>
+            Ашық жүйе ортамен зат та, энергия да алмасады. Жабық жүйе ортамен энергия
+            алмасады, бірақ зат алмаспайды. Оқшауланған жүйе ортамен зат та, энергия
+            да алмаспайды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ішкі энергия</summary>
+          <p>
+            Ішкі энергия — жүйедегі бөлшектердің қозғалыс энергиясы мен өзара
+            әрекеттесу энергиясының жиынтығы. Химиялық реакция кезінде ішкі энергия
+            өзгеруі мүмкін. Ішкі энергияның абсолют мәнін емес, өзгерісін анықтау
+            маңызды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Жылу және жұмыс</summary>
+          <p>
+            Жылу — температура айырмасына байланысты берілетін энергия түрі.
+            Жұмыс — жүйе мен орта арасындағы энергия алмасудың механикалық түрі.
+            Термодинамикада жүйеге берілген немесе жүйеден шыққан энергия балансы
+            маңызды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Термодинамиканың бірінші заңы</summary>
+          <p>
+            Термодинамиканың бірінші заңы энергияның сақталу заңын химиялық жүйелерге
+            қолданады. Жүйенің ішкі энергиясының өзгерісі жүйеге берілген жылу мен
+            жүйе істеген жұмыспен байланысты.
+          </p>
+        </details>
+
+        <details>
+          <summary>Энтальпия</summary>
+          <p>
+            Энтальпия — тұрақты қысымда жүретін процестердегі жылу эффектісін сипаттайтын
+            термодинамикалық шама. Химиялық реакция үшін энтальпия өзгерісі ΔH арқылы
+            белгіленеді. Тұрақты қысымда бөлінетін немесе сіңірілетін жылу ΔH-қа тең.
+          </p>
+        </details>
+
+        <details>
+          <summary>Экзотермиялық реакция</summary>
+          <p>
+            Экзотермиялық реакция кезінде жүйеден ортаға жылу бөлінеді. Мұндай реакцияда
+            өнімдердің энтальпиясы бастапқы заттарға қарағанда төмен болады, сондықтан
+            ΔH &lt; 0.
+          </p>
+        </details>
+
+        <details>
+          <summary>Эндотермиялық реакция</summary>
+          <p>
+            Эндотермиялық реакция кезінде жүйе ортадан жылу сіңіреді. Мұндай реакцияда
+            өнімдердің энтальпиясы бастапқы заттарға қарағанда жоғары болады, сондықтан
+            ΔH &gt; 0.
+          </p>
+        </details>
+
+        <details>
+          <summary>Термохимиялық теңдеу</summary>
+          <p>
+            Термохимиялық теңдеу реакция теңдеуімен бірге жылу эффектісін де көрсетеді.
+            Коэффициенттер өзгерсе, реакцияның жылу эффектісі де сол коэффициентке
+            сәйкес өзгереді. Реакция кері бағытта жазылса, ΔH таңбасы өзгереді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Гесс заңы</summary>
+          <p>
+            Гесс заңы бойынша реакцияның жылу эффектісі оның жүру жолына тәуелді емес,
+            тек бастапқы және соңғы күйге тәуелді. Сондықтан күрделі реакцияның
+            энтальпия өзгерісін бірнеше қарапайым реакциялардың энтальпия өзгерістері
+            арқылы есептеуге болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Түзілу энтальпиясы</summary>
+          <p>
+            Түзілу энтальпиясы — 1 моль күрделі заттың жай заттардан стандарт жағдайда
+            түзілу кезіндегі энтальпия өзгерісі. Реакция энтальпиясын өнімдер мен
+            бастапқы заттардың стандарт түзілу энтальпиялары арқылы есептеуге болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Энтропия</summary>
+          <p>
+            Энтропия жүйедегі ретсіздік дәрежесін сипаттайды. Газ түзілуі, бөлшектер
+            санының артуы, қатты күйден сұйыққа немесе газға өтуі энтропияның артуына
+            әкелуі мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Гиббс энергиясы</summary>
+          <p>
+            Гиббс энергиясы процестің өздігінен жүру мүмкіндігін сипаттайды.
+            Тұрақты температура мен қысымда ΔG &lt; 0 болса, процесс өздігінен жүруге
+            бейім; ΔG &gt; 0 болса, өздігінен жүрмейді; ΔG = 0 болса, жүйе тепе-теңдікте
+            болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>КТ үшін маңызды дағды</summary>
+          <p>
+            Экзотермиялық және эндотермиялық реакцияны ажырату, ΔH таңбасын түсіну,
+            Гесс заңын қолдану, реакция энтальпиясын түзілу энтальпиялары арқылы
+            есептеу және ΔG бойынша процестің бағытын болжау маңызды.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Жүйе + орта → термодинамикалық қарастыру</div>
+          <div class="formula">Ашық жүйе → зат және энергия алмасады</div>
+          <div class="formula">Жабық жүйе → энергия алмасады, зат алмаспайды</div>
+          <div class="formula">Оқшауланған жүйе → зат та, энергия да алмаспайды</div>
+          <div class="formula">ΔU = Q − W</div>
+          <div class="formula">Тұрақты қысымда: Qp = ΔH</div>
+          <div class="formula">Экзотермиялық реакция: ΔH &lt; 0</div>
+          <div class="formula">Эндотермиялық реакция: ΔH &gt; 0</div>
+          <div class="formula">Реакция кері жазылса → ΔH таңбасы өзгереді</div>
+          <div class="formula">Коэффициент k есе артса → ΔH та k есе артады</div>
+          <div class="formula">Гесс заңы: ΔH жалпы = ΣΔH кезеңдері</div>
+          <div class="formula">ΔH°реак = ΣνΔH°f(өнімдер) − ΣνΔH°f(бастапқы заттар)</div>
+          <div class="formula">Энтропия → ретсіздік өлшемі</div>
+          <div class="formula">ΔG = ΔH − TΔS</div>
+          <div class="formula">ΔG &lt; 0 → процесс өздігінен жүреді</div>
+          <div class="formula">ΔG &gt; 0 → процесс өздігінен жүрмейді</div>
+          <div class="formula">ΔG = 0 → тепе-теңдік</div>
+          <div class="formula">T → Кельвинмен алынады</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Химиялық термодинамика</b>
+            <p>Химиялық процестердегі энергия өзгерістерін зерттейтін бөлім.</p>
+          </div>
+
+          <div class="term">
+            <b>Жүйе</b>
+            <p>Зерттелетін зат немесе процесс жүретін бөлік.</p>
+          </div>
+
+          <div class="term">
+            <b>Орта</b>
+            <p>Жүйеден тыс орналасқан қоршаған бөлік.</p>
+          </div>
+
+          <div class="term">
+            <b>Ішкі энергия</b>
+            <p>Жүйедегі бөлшектердің қозғалыс және өзара әрекеттесу энергияларының жиынтығы.</p>
+          </div>
+
+          <div class="term">
+            <b>Жылу</b>
+            <p>Температура айырмасына байланысты берілетін энергия.</p>
+          </div>
+
+          <div class="term">
+            <b>Жұмыс</b>
+            <p>Энергия алмасудың механикалық түрі.</p>
+          </div>
+
+          <div class="term">
+            <b>Энтальпия</b>
+            <p>Тұрақты қысымдағы жылу эффектісін сипаттайтын термодинамикалық шама.</p>
+          </div>
+
+          <div class="term">
+            <b>Экзотермиялық реакция</b>
+            <p>Жылу бөлінетін реакция; ΔH теріс болады.</p>
+          </div>
+
+          <div class="term">
+            <b>Эндотермиялық реакция</b>
+            <p>Жылу сіңірілетін реакция; ΔH оң болады.</p>
+          </div>
+
+          <div class="term">
+            <b>Термохимиялық теңдеу</b>
+            <p>Реакция теңдеуімен бірге жылу эффектісі көрсетілген теңдеу.</p>
+          </div>
+
+          <div class="term">
+            <b>Гесс заңы</b>
+            <p>Реакция жылу эффектісі реакция жолына емес, бастапқы және соңғы күйге тәуелді.</p>
+          </div>
+
+          <div class="term">
+            <b>Түзілу энтальпиясы</b>
+            <p>1 моль заттың жай заттардан түзілу энтальпия өзгерісі.</p>
+          </div>
+
+          <div class="term">
+            <b>Энтропия</b>
+            <p>Жүйенің ретсіздік дәрежесін сипаттайтын шама.</p>
+          </div>
+
+          <div class="term">
+            <b>Гиббс энергиясы</b>
+            <p>Процестің өздігінен жүру мүмкіндігін сипаттайтын термодинамикалық шама.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block6Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Химиялық термодинамика нені зерттейді?</p>
+          <label class="option"><input type="radio" name="b6q1" value="0"> Тек атом ядросының ыдырауын</label>
+          <label class="option"><input type="radio" name="b6q1" value="1"> Тек электрондардың орбитальдар бойынша орналасуын</label>
+          <label class="option"><input type="radio" name="b6q1" value="2"> Химиялық процестердегі энергия өзгерістерін</label>
+          <label class="option"><input type="radio" name="b6q1" value="3"> Тек кристалдық тор түйіндерінің санын</label>
+          <label class="option"><input type="radio" name="b6q1" value="4"> Тек элементтердің периодтық қатардағы орнын</label>
+          <div class="explain">Дұрыс жауап: C. Термодинамика реакциядағы жылу, жұмыс, энтальпия, энтропия және Гиббс энергиясын қарастырады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Ашық жүйеге сәйкес сипаттама:</p>
+          <label class="option"><input type="radio" name="b6q2" value="0"> Ортамен зат та, энергия да алмаспайды</label>
+          <label class="option"><input type="radio" name="b6q2" value="1"> Ортамен тек зат алмасады, энергия алмаспайды</label>
+          <label class="option"><input type="radio" name="b6q2" value="2"> Ортамен тек электрон алмасады</label>
+          <label class="option"><input type="radio" name="b6q2" value="3"> Ортамен энергия алмасады, зат алмаспайды</label>
+          <label class="option"><input type="radio" name="b6q2" value="4"> Ортамен зат та, энергия да алмасады</label>
+          <div class="explain">Дұрыс жауап: E. Ашық жүйе қоршаған ортамен зат және энергия алмасады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Жабық жүйеге сәйкес сипаттама:</p>
+          <label class="option"><input type="radio" name="b6q3" value="0"> Энергия алмасады, бірақ зат алмаспайды</label>
+          <label class="option"><input type="radio" name="b6q3" value="1"> Зат та, энергия да алмаспайды</label>
+          <label class="option"><input type="radio" name="b6q3" value="2"> Тек зат алмасады, энергия алмаспайды</label>
+          <label class="option"><input type="radio" name="b6q3" value="3"> Тек протондар алмасады</label>
+          <label class="option"><input type="radio" name="b6q3" value="4"> Тек нейтрондар алмасады</label>
+          <div class="explain">Дұрыс жауап: A. Жабық жүйе энергияны алмастыра алады, бірақ зат алмасуы болмайды.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Тұрақты қысымда реакцияның жылу эффектісі қай шамаға тең?</p>
+          <label class="option"><input type="radio" name="b6q4" value="0"> Атом радиусына</label>
+          <label class="option"><input type="radio" name="b6q4" value="1"> Электртерістілікке</label>
+          <label class="option"><input type="radio" name="b6q4" value="2"> Нейтрон санына</label>
+          <label class="option"><input type="radio" name="b6q4" value="3"> Энтальпия өзгерісіне</label>
+          <label class="option"><input type="radio" name="b6q4" value="4"> Массалық санға</label>
+          <div class="explain">Дұрыс жауап: D. Тұрақты қысымда Qp = ΔH.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Экзотермиялық реакция үшін дұрыс белгі:</p>
+          <label class="option"><input type="radio" name="b6q5" value="0"> ΔH &gt; 0</label>
+          <label class="option"><input type="radio" name="b6q5" value="1"> ΔH &lt; 0</label>
+          <label class="option"><input type="radio" name="b6q5" value="2"> ΔH = атомдық нөмір</label>
+          <label class="option"><input type="radio" name="b6q5" value="3"> ΔH = нейтрон саны</label>
+          <label class="option"><input type="radio" name="b6q5" value="4"> ΔH әрқашан нөлге тең</label>
+          <div class="explain">Дұрыс жауап: B. Экзотермиялық реакцияда жылу бөлінеді, сондықтан өнімдердің энтальпиясы төмен және ΔH теріс болады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Эндотермиялық реакцияға сәйкес сипаттама:</p>
+          <label class="option"><input type="radio" name="b6q6" value="0"> Жылу бөледі және ΔH &lt; 0</label>
+          <label class="option"><input type="radio" name="b6q6" value="1"> Электрон беріп катион түзеді</label>
+          <label class="option"><input type="radio" name="b6q6" value="2"> Тек иондық тор түзеді</label>
+          <label class="option"><input type="radio" name="b6q6" value="3"> Тек бейметалдық қасиетті көрсетеді</label>
+          <label class="option"><input type="radio" name="b6q6" value="4"> Жылу сіңіреді және ΔH &gt; 0</label>
+          <div class="explain">Дұрыс жауап: E. Эндотермиялық процесс сырттан энергия сіңіреді.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Реакция теңдеуі кері бағытта жазылса, ΔH қалай өзгереді?</p>
+          <label class="option"><input type="radio" name="b6q7" value="0"> Мәні де, таңбасы да өзгермейді</label>
+          <label class="option"><input type="radio" name="b6q7" value="1"> Әрқашан нөлге тең болады</label>
+          <label class="option"><input type="radio" name="b6q7" value="2"> Таңбасы қарама-қарсы өзгереді</label>
+          <label class="option"><input type="radio" name="b6q7" value="3"> Атомдық нөмірге тең болады</label>
+          <label class="option"><input type="radio" name="b6q7" value="4"> Тек екі есе артады</label>
+          <div class="explain">Дұрыс жауап: C. Тура және кері реакциялардың энтальпия өзгерістері таңбасы бойынша қарама-қарсы.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Егер реакция теңдеуіндегі барлық коэффициенттер 2 есе артса, ΔH қалай өзгереді?</p>
+          <label class="option"><input type="radio" name="b6q8" value="0"> 2 есе артады</label>
+          <label class="option"><input type="radio" name="b6q8" value="1"> 2 есе кемиді</label>
+          <label class="option"><input type="radio" name="b6q8" value="2"> Өзгермейді</label>
+          <label class="option"><input type="radio" name="b6q8" value="3"> Нөлге тең болады</label>
+          <label class="option"><input type="radio" name="b6q8" value="4"> Таңбасы ғана өзгереді</label>
+          <div class="explain">Дұрыс жауап: A. Термохимиялық теңдеуде ΔH реакция мөлшеріне пропорционал өзгереді.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Гесс заңы бойынша реакцияның жылу эффектісі:</p>
+          <label class="option"><input type="radio" name="b6q9" value="0"> Реакцияның жүру жолына ғана тәуелді</label>
+          <label class="option"><input type="radio" name="b6q9" value="1"> Тек катализатор массасына тәуелді</label>
+          <label class="option"><input type="radio" name="b6q9" value="2"> Тек қысымның сандық мәніне тәуелді</label>
+          <label class="option"><input type="radio" name="b6q9" value="3"> Бастапқы және соңғы күйге тәуелді</label>
+          <label class="option"><input type="radio" name="b6q9" value="4"> Тек аралық өнімдердің түсіне тәуелді</label>
+          <div class="explain">Дұрыс жауап: D. Гесс заңы бойынша ΔH реакция жолына тәуелді емес.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Реакция: C + O₂ → CO₂, ΔH = −394 кДж. 2 моль CO₂ түзілгенде бөлінетін жылу:</p>
+          <label class="option"><input type="radio" name="b6q10" value="0"> 394 кДж</label>
+          <label class="option"><input type="radio" name="b6q10" value="1"> 788 кДж</label>
+          <label class="option"><input type="radio" name="b6q10" value="2"> 197 кДж</label>
+          <label class="option"><input type="radio" name="b6q10" value="3"> 591 кДж</label>
+          <label class="option"><input type="radio" name="b6q10" value="4"> 985 кДж</label>
+          <div class="explain">Дұрыс жауап: B. Шешуі: 1 моль CO₂ түзілгенде 394 кДж бөлінеді, 2 моль үшін 2·394=788 кДж.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>11. Реакция: N₂ + O₂ → 2NO, ΔH = +180 кДж. Бұл реакция:</p>
+          <label class="option"><input type="radio" name="b6q11" value="0"> Экзотермиялық, себебі ΔH теріс</label>
+          <label class="option"><input type="radio" name="b6q11" value="1"> Иондық, себебі жылу бөлінеді</label>
+          <label class="option"><input type="radio" name="b6q11" value="2"> Тепе-теңдікте ғана жүрмейтін реакция</label>
+          <label class="option"><input type="radio" name="b6q11" value="3"> Ядролық реакция</label>
+          <label class="option"><input type="radio" name="b6q11" value="4"> Эндотермиялық, себебі ΔH оң</label>
+          <div class="explain">Дұрыс жауап: E. ΔH &gt; 0 болғандықтан реакция жылу сіңіреді.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>12. ΔH°реак = ΣνΔH°f(өнімдер) − ΣνΔH°f(бастапқы заттар) формуласы нені есептеуге қолданылады?</p>
+          <label class="option"><input type="radio" name="b6q12" value="0"> Атом радиусын</label>
+          <label class="option"><input type="radio" name="b6q12" value="1"> Электрон санын</label>
+          <label class="option"><input type="radio" name="b6q12" value="2"> Реакция энтальпиясын</label>
+          <label class="option"><input type="radio" name="b6q12" value="3"> Нейтрон санын</label>
+          <label class="option"><input type="radio" name="b6q12" value="4"> Орбиталь санын</label>
+          <div class="explain">Дұрыс жауап: C. Бұл формула стандарт түзілу энтальпиялары арқылы реакцияның энтальпия өзгерісін табады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>13. Энтропияның артуына жиі сәйкес келетін жағдай:</p>
+          <label class="option"><input type="radio" name="b6q13" value="0"> Қатты заттан газ түзілуі</label>
+          <label class="option"><input type="radio" name="b6q13" value="1"> Газдың қатты затқа айналуы</label>
+          <label class="option"><input type="radio" name="b6q13" value="2"> Бөлшектер қозғалысының толық тоқтауы</label>
+          <label class="option"><input type="radio" name="b6q13" value="3"> Жүйенің реттелуі артуы</label>
+          <label class="option"><input type="radio" name="b6q13" value="4"> Температураның абсолют нөлден төмендеуі</label>
+          <div class="explain">Дұрыс жауап: A. Газ күйінде бөлшектер еркінірек қозғалады, ретсіздік жоғары болады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>14. Гиббс энергиясының дұрыс формуласы:</p>
+          <label class="option"><input type="radio" name="b6q14" value="0"> ΔG = ΔH + TΔS</label>
+          <label class="option"><input type="radio" name="b6q14" value="1"> ΔG = ΔH / TΔS</label>
+          <label class="option"><input type="radio" name="b6q14" value="2"> ΔG = T − ΔHΔS</label>
+          <label class="option"><input type="radio" name="b6q14" value="3"> ΔG = ΔH − TΔS</label>
+          <label class="option"><input type="radio" name="b6q14" value="4"> ΔG = ΔS − TΔH</label>
+          <div class="explain">Дұрыс жауап: D. Гиббс энергиясы энтальпия мен энтропия факторларын байланыстырады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>15. Тұрақты температура мен қысымда ΔG &lt; 0 болса, процесс:</p>
+          <label class="option"><input type="radio" name="b6q15" value="0"> Тепе-теңдікте болады</label>
+          <label class="option"><input type="radio" name="b6q15" value="1"> Өздігінен жүруге бейім болады</label>
+          <label class="option"><input type="radio" name="b6q15" value="2"> Өздігінен жүрмейді</label>
+          <label class="option"><input type="radio" name="b6q15" value="3"> Ядролық ыдырауға айналады</label>
+          <label class="option"><input type="radio" name="b6q15" value="4"> Міндетті түрде тоқтайды</label>
+          <div class="explain">Дұрыс жауап: B. ΔG теріс болса, процесс термодинамикалық тұрғыдан өздігінен жүруге қолайлы.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>16. ΔH = −100 кДж, TΔS = +20 кДж болса, ΔG мәні және қорытынды:</p>
+          <label class="option"><input type="radio" name="b6q16" value="0"> ΔG = −80 кДж, өздігінен жүрмейді</label>
+          <label class="option"><input type="radio" name="b6q16" value="1"> ΔG = +120 кДж, өздігінен жүреді</label>
+          <label class="option"><input type="radio" name="b6q16" value="2"> ΔG = −120 кДж, тепе-теңдік қана</label>
+          <label class="option"><input type="radio" name="b6q16" value="3"> ΔG = +80 кДж, өздігінен жүреді</label>
+          <label class="option"><input type="radio" name="b6q16" value="4"> ΔG = −120 кДж, өздігінен жүруге бейім</label>
+          <div class="explain">Дұрыс жауап: E. Шешуі: ΔG = ΔH − TΔS = −100 − 20 = −120 кДж. ΔG &lt; 0, процесс өздігінен жүруге бейім.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block6')">Тестті тексеру</button>
+      </div>
+    </section>
+      <section id="block7" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">7</div>
+        <div>
+          <h2>Химиялық кинетика және химиялық тепе-теңдік</h2>
+          <p>
+            Реакция жылдамдығы, жылдамдыққа әсер ететін факторлар, концентрация,
+            температура, катализатор, активтену энергиясы, қайтымды реакциялар,
+            химиялық тепе-теңдік, тепе-теңдік константасы және Ле Шателье принципі.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block7', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block7', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block7', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block7', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Химиялық кинетиканың мәні</summary>
+          <p>
+            Химиялық кинетика химиялық реакциялардың жүру жылдамдығын және оған әсер
+            ететін факторларды зерттейді. Термодинамика реакцияның жүру мүмкіндігін
+            көрсетсе, кинетика реакцияның қаншалықты тез жүретінін сипаттайды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Реакция жылдамдығы</summary>
+          <p>
+            Реакция жылдамдығы — уақыт бірлігінде реагент немесе өнім концентрациясының
+            өзгеруі. Егер бастапқы зат жұмсалса, оның концентрациясы азаяды; өнім түзілсе,
+            оның концентрациясы артады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Реакция жылдамдығына әсер ететін факторлар</summary>
+          <p>
+            Реакция жылдамдығына реагенттердің табиғаты, концентрация, температура,
+            қысым, жанасу бетінің ауданы және катализатор әсер етеді. Газдар үшін
+            қысымның өзгеруі концентрацияның өзгеруімен байланысты болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Концентрация әсері</summary>
+          <p>
+            Реагент концентрациясы артқанда бөлшектердің соқтығысу жиілігі көбейеді.
+            Сондықтан көп жағдайда концентрация жоғарылаған сайын реакция жылдамдығы
+            артады. Бірақ нақты тәуелділік реакцияның кинетикалық теңдеуімен анықталады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Температура әсері</summary>
+          <p>
+            Температура артқанда бөлшектердің орташа кинетикалық энергиясы өседі.
+            Нәтижесінде активтену энергиясынан асатын бөлшектер саны көбейеді, сондықтан
+            реакция жылдамдығы артады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Вант-Гофф ережесі</summary>
+          <p>
+            Вант-Гофф ережесі бойынша температураны әрбір 10°C-қа арттырғанда көптеген
+            реакциялардың жылдамдығы шамамен 2–4 есе артады. Бұл ереже жуық бағалау
+            үшін қолданылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Активтену энергиясы</summary>
+          <p>
+            Активтену энергиясы — реакция жүруі үшін бөлшектердің жеңуі қажет ең аз
+            энергия тосқауылы. Активтену энергиясы неғұрлым төмен болса, реакция
+            соғұрлым жылдамырақ жүруі мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Катализатор</summary>
+          <p>
+            Катализатор реакцияның жылдамдығын өзгертеді, бірақ реакция соңында өзі
+            жұмсалмайды. Катализатор реакцияның басқа жолмен жүруіне жағдай жасап,
+            активтену энергиясын төмендетеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Гомогенді және гетерогенді катализ</summary>
+          <p>
+            Гомогенді катализде катализатор мен реагенттер бір фазада болады.
+            Гетерогенді катализде катализатор мен реагенттер әртүрлі фазада болады.
+            Көптеген өндірістік реакциялар қатты катализатор бетінде жүреді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Қайтымды реакция</summary>
+          <p>
+            Қайтымды реакция тура және кері бағытта жүре алады. Тура реакция өнімдер
+            түзеді, ал кері реакция өнімдерден бастапқы заттарды қайта түзеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Химиялық тепе-теңдік</summary>
+          <p>
+            Химиялық тепе-теңдік — тура және кері реакция жылдамдықтары теңескен күй.
+            Бұл кезде реагенттер мен өнімдердің концентрациялары уақыт бойынша өзгермей
+            көрінеді, бірақ микродеңгейде екі бағыттағы реакциялар жалғасады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Динамикалық тепе-теңдік</summary>
+          <p>
+            Химиялық тепе-теңдік динамикалық сипатқа ие. Бұл реакция тоқтап қалды деген
+            сөз емес: тура және кері реакциялар бірдей жылдамдықпен жүріп тұрады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Тепе-теңдік константасы</summary>
+          <p>
+            Тепе-теңдік константасы өнімдер мен бастапқы заттардың тепе-теңдік
+            концентрацияларының қатынасымен өрнектеледі. Константа мәні температураға
+            тәуелді және реакцияның тепе-теңдік күйдегі бағытын сипаттайды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ле Шателье принципі</summary>
+          <p>
+            Егер тепе-теңдіктегі жүйеге сыртқы әсер жасалса, жүйе сол әсерді әлсірететін
+            бағытта ығысады. Сыртқы әсерге концентрация, қысым және температура өзгерісі
+            жатады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Концентрация және қысым өзгерісі</summary>
+          <p>
+            Реагент концентрациясы артса, тепе-теңдік оны жұмсайтын бағытқа ығысады.
+            Газ жүйесінде қысым артса, тепе-теңдік газ молекулалары саны аз жаққа
+            ығысады. Егер екі жақтағы газ молекулалары саны тең болса, қысым өзгерісі
+            тепе-теңдікке айқын әсер етпеуі мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Температура өзгерісі</summary>
+          <p>
+            Температура артқанда тепе-теңдік эндотермиялық бағытқа ығысады.
+            Температура төмендегенде тепе-теңдік экзотермиялық бағытқа ығысады.
+            Температура тепе-теңдік константасының мәнін өзгертеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>КТ үшін маңызды дағды</summary>
+          <p>
+            Реакция жылдамдығына әсер ететін факторларды түсіну, Вант-Гофф ережесімен
+            қарапайым есеп шығару, катализатордың рөлін білу, тепе-теңдік константасын
+            жазу және Ле Шателье принципі бойынша ығысу бағытын анықтау маңызды.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">v = ΔC / Δt</div>
+          <div class="formula">Бастапқы зат үшін: v = −ΔC / Δt</div>
+          <div class="formula">Өнім үшін: v = +ΔC / Δt</div>
+          <div class="formula">C ↑ → соқтығысу жиілігі ↑ → v ↑</div>
+          <div class="formula">T ↑ → активті бөлшектер саны ↑ → v ↑</div>
+          <div class="formula">Катализатор → Ea төмендетеді</div>
+          <div class="formula">Катализатор → тепе-теңдікті ығыстырмайды</div>
+          <div class="formula">Вант-Гофф: v₂/v₁ = γ^((T₂−T₁)/10)</div>
+          <div class="formula">γ → температуралық коэффициент</div>
+          <div class="formula">Тепе-теңдік: vтура = vкері</div>
+          <div class="formula">aA + bB ⇄ cC + dD</div>
+          <div class="formula">Kc = [C]^c[D]^d / [A]^a[B]^b</div>
+          <div class="formula">K үлкен → өнімдер басым</div>
+          <div class="formula">K кіші → бастапқы заттар басым</div>
+          <div class="formula">Қысым ↑ → газ молекуласы аз жаққа ығысу</div>
+          <div class="formula">T ↑ → эндотермиялық бағытқа ығысу</div>
+          <div class="formula">T ↓ → экзотермиялық бағытқа ығысу</div>
+          <div class="formula">Инертті катализатор → реакция соңында жұмсалмайды</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Химиялық кинетика</b>
+            <p>Химиялық реакция жылдамдығын және оған әсер ететін факторларды зерттейтін бөлім.</p>
+          </div>
+
+          <div class="term">
+            <b>Реакция жылдамдығы</b>
+            <p>Уақыт бірлігінде концентрацияның өзгеруі.</p>
+          </div>
+
+          <div class="term">
+            <b>Активтену энергиясы</b>
+            <p>Реакция жүруі үшін бөлшектер жеңуі керек ең аз энергия тосқауылы.</p>
+          </div>
+
+          <div class="term">
+            <b>Катализатор</b>
+            <p>Реакция жылдамдығын өзгертіп, өзі реакция соңында жұмсалмайтын зат.</p>
+          </div>
+
+          <div class="term">
+            <b>Гомогенді катализ</b>
+            <p>Катализатор мен реагенттер бір фазада болатын катализ.</p>
+          </div>
+
+          <div class="term">
+            <b>Гетерогенді катализ</b>
+            <p>Катализатор мен реагенттер әртүрлі фазада болатын катализ.</p>
+          </div>
+
+          <div class="term">
+            <b>Қайтымды реакция</b>
+            <p>Тура және кері бағытта жүре алатын реакция.</p>
+          </div>
+
+          <div class="term">
+            <b>Химиялық тепе-теңдік</b>
+            <p>Тура және кері реакция жылдамдықтары теңескен күй.</p>
+          </div>
+
+          <div class="term">
+            <b>Динамикалық тепе-теңдік</b>
+            <p>Тура және кері реакциялар тоқтамай, бірдей жылдамдықпен жүретін тепе-теңдік.</p>
+          </div>
+
+          <div class="term">
+            <b>Тепе-теңдік константасы</b>
+            <p>Тепе-теңдіктегі өнімдер мен бастапқы заттар концентрацияларының қатынасын сипаттайды.</p>
+          </div>
+
+          <div class="term">
+            <b>Ле Шателье принципі</b>
+            <p>Жүйе сыртқы әсерді әлсірететін бағытта тепе-теңдікті ығыстырады.</p>
+          </div>
+
+          <div class="term">
+            <b>Температуралық коэффициент</b>
+            <p>Температура 10°C-қа артқанда реакция жылдамдығы қанша есе өзгеретінін көрсетеді.</p>
+          </div>
+
+          <div class="term">
+            <b>Тура реакция</b>
+            <p>Бастапқы заттардан өнімдер түзілу бағыты.</p>
+          </div>
+
+          <div class="term">
+            <b>Кері реакция</b>
+            <p>Өнімдерден бастапқы заттар түзілу бағыты.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block7Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Химиялық кинетика нені зерттейді?</p>
+          <label class="option"><input type="radio" name="b7q1" value="0"> Тек атом ядросының құрамын</label>
+          <label class="option"><input type="radio" name="b7q1" value="1"> Тек кристалдық тордың түрін</label>
+          <label class="option"><input type="radio" name="b7q1" value="2"> Реакция жылдамдығын және оған әсер ететін факторларды</label>
+          <label class="option"><input type="radio" name="b7q1" value="3"> Тек элементтердің периодтағы орнын</label>
+          <label class="option"><input type="radio" name="b7q1" value="4"> Тек молекуланың кеңістіктік пішінін</label>
+          <div class="explain">Дұрыс жауап: C. Кинетика реакцияның қаншалықты тез жүретінін және жылдамдық факторларын қарастырады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Реакция жылдамдығының жалпы анықтамасы:</p>
+          <label class="option"><input type="radio" name="b7q2" value="0"> Заттың молярлық массасының зарядқа қатынасы</label>
+          <label class="option"><input type="radio" name="b7q2" value="1"> Жүйедегі протон санының өзгеруі</label>
+          <label class="option"><input type="radio" name="b7q2" value="2"> Реакция энтальпиясының температураға қатынасы</label>
+          <label class="option"><input type="radio" name="b7q2" value="3"> Электрондық қабаттар санының артуы</label>
+          <label class="option"><input type="radio" name="b7q2" value="4"> Уақыт бірлігінде концентрацияның өзгеруі</label>
+          <div class="explain">Дұрыс жауап: E. Реакция жылдамдығы концентрация өзгерісінің уақытқа қатынасымен сипатталады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Реагент концентрациясы артқанда реакция жылдамдығы көбіне неге артады?</p>
+          <label class="option"><input type="radio" name="b7q3" value="0"> Бөлшектердің соқтығысу жиілігі көбейеді</label>
+          <label class="option"><input type="radio" name="b7q3" value="1"> Ядро заряды міндетті түрде өзгереді</label>
+          <label class="option"><input type="radio" name="b7q3" value="2"> Атомдық масса азаяды</label>
+          <label class="option"><input type="radio" name="b7q3" value="3"> Электрондар ядродан толық шығып кетеді</label>
+          <label class="option"><input type="radio" name="b7q3" value="4"> Кристалдық тор түрі бірден өзгереді</label>
+          <div class="explain">Дұрыс жауап: A. Концентрация жоғары болса, бөлшектер жиі соқтығысады, нәтижесінде реакция жылдамдығы артады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Температура артқанда реакция жылдамдығының арту себебі:</p>
+          <label class="option"><input type="radio" name="b7q4" value="0"> Бөлшектердің қозғалысы толық тоқтайды</label>
+          <label class="option"><input type="radio" name="b7q4" value="1"> Иондық байланыстар металдыққа айналады</label>
+          <label class="option"><input type="radio" name="b7q4" value="2"> Реакцияға қатысатын заттардың протон саны кемиді</label>
+          <label class="option"><input type="radio" name="b7q4" value="3"> Активтену энергиясын жеңетін бөлшектер саны көбейеді</label>
+          <label class="option"><input type="radio" name="b7q4" value="4"> Барлық реакциялар тепе-теңдіктен шығып тоқтайды</label>
+          <div class="explain">Дұрыс жауап: D. Температура өскенде бөлшектердің кинетикалық энергиясы артады, активті соқтығысулар саны көбейеді.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Активтену энергиясы дегеніміз:</p>
+          <label class="option"><input type="radio" name="b7q5" value="0"> Реакциядан кейінгі өнім массасы</label>
+          <label class="option"><input type="radio" name="b7q5" value="1"> Реакция жүруі үшін қажет ең аз энергия тосқауылы</label>
+          <label class="option"><input type="radio" name="b7q5" value="2"> Ядродағы протон мен нейтрон қосындысы</label>
+          <label class="option"><input type="radio" name="b7q5" value="3"> Электрондық қабаттар саны</label>
+          <label class="option"><input type="radio" name="b7q5" value="4"> Ерітіндідегі иондардың жалпы заряды</label>
+          <div class="explain">Дұрыс жауап: B. Активтену энергиясы бөлшектер реакцияға түсу үшін жеңуі керек энергия тосқауылын көрсетеді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Катализатордың негізгі әсері:</p>
+          <label class="option"><input type="radio" name="b7q6" value="0"> Реакция соңында толық жұмсалып кетеді</label>
+          <label class="option"><input type="radio" name="b7q6" value="1"> Реакцияның ΔH мәнін міндетті түрде оңға өзгертеді</label>
+          <label class="option"><input type="radio" name="b7q6" value="2"> Тепе-теңдікті тек өнімдер жағына ығыстырады</label>
+          <label class="option"><input type="radio" name="b7q6" value="3"> Ядро зарядын өзгертіп, жаңа элемент түзеді</label>
+          <label class="option"><input type="radio" name="b7q6" value="4"> Активтену энергиясын төмендетіп, реакция жылдамдығын өзгертеді</label>
+          <div class="explain">Дұрыс жауап: E. Катализатор реакцияға басқа жол ұсынып, активтену энергиясын төмендетеді.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Катализатор химиялық тепе-теңдікке қалай әсер етеді?</p>
+          <label class="option"><input type="radio" name="b7q7" value="0"> Тепе-теңдікті әрқашан оңға ығыстырады</label>
+          <label class="option"><input type="radio" name="b7q7" value="1"> Тепе-теңдікті әрқашан солға ығыстырады</label>
+          <label class="option"><input type="radio" name="b7q7" value="2"> Тепе-теңдік орнына әсер етпей, оған жету уақытын қысқартады</label>
+          <label class="option"><input type="radio" name="b7q7" value="3"> Тепе-теңдік константасын концентрацияға тәуелсіз нөлге теңестіреді</label>
+          <label class="option"><input type="radio" name="b7q7" value="4"> Тек өнімдердің құрамын өзгертіп жібереді</label>
+          <div class="explain">Дұрыс жауап: C. Катализатор тура және кері реакцияларды бірдей жылдамдатып, тепе-теңдікке тез жеткізеді.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Температура 20°C-тан 50°C-қа артты. Температуралық коэффициент γ = 2 болса, реакция жылдамдығы қанша есе артады?</p>
+          <label class="option"><input type="radio" name="b7q8" value="0"> 8 есе</label>
+          <label class="option"><input type="radio" name="b7q8" value="1"> 4 есе</label>
+          <label class="option"><input type="radio" name="b7q8" value="2"> 6 есе</label>
+          <label class="option"><input type="radio" name="b7q8" value="3"> 10 есе</label>
+          <label class="option"><input type="radio" name="b7q8" value="4"> 12 есе</label>
+          <div class="explain">Дұрыс жауап: A. Шешуі: ΔT=30°C, яғни үш рет 10°C. v₂/v₁=2³=8.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Температура 10°C-қа артқанда реакция жылдамдығы 3 есе өседі. 30°C-қа артқанда жылдамдық:</p>
+          <label class="option"><input type="radio" name="b7q9" value="0"> 9 есе артады</label>
+          <label class="option"><input type="radio" name="b7q9" value="1"> 12 есе артады</label>
+          <label class="option"><input type="radio" name="b7q9" value="2"> 18 есе артады</label>
+          <label class="option"><input type="radio" name="b7q9" value="3"> 27 есе артады</label>
+          <label class="option"><input type="radio" name="b7q9" value="4"> 30 есе артады</label>
+          <div class="explain">Дұрыс жауап: D. Шешуі: 30°C = үш аралық. v₂/v₁=3³=27.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Химиялық тепе-теңдік күйінде:</p>
+          <label class="option"><input type="radio" name="b7q10" value="0"> Тура реакция тоқтап, кері реакция ғана жүреді</label>
+          <label class="option"><input type="radio" name="b7q10" value="1"> Тура және кері реакция жылдамдықтары тең болады</label>
+          <label class="option"><input type="radio" name="b7q10" value="2"> Барлық реагенттер толық жұмсалады</label>
+          <label class="option"><input type="radio" name="b7q10" value="3"> Өнімдер концентрациясы міндетті түрде нөлге тең болады</label>
+          <label class="option"><input type="radio" name="b7q10" value="4"> Реакция ядролық процеске айналады</label>
+          <div class="explain">Дұрыс жауап: B. Тепе-теңдік динамикалық: тура және кері реакциялар бірдей жылдамдықпен жүреді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>11. Динамикалық тепе-теңдікке сәйкес тұжырым:</p>
+          <label class="option"><input type="radio" name="b7q11" value="0"> Реакциялар толық тоқтайды</label>
+          <label class="option"><input type="radio" name="b7q11" value="1"> Тек өнімдер түзіледі, кері реакция жүрмейді</label>
+          <label class="option"><input type="radio" name="b7q11" value="2"> Тек бастапқы заттар түзіледі</label>
+          <label class="option"><input type="radio" name="b7q11" value="3"> Реакция жылдамдығы әрқашан нөлге тең болады</label>
+          <label class="option"><input type="radio" name="b7q11" value="4"> Тура және кері реакциялар тоқтамай, тең жылдамдықпен жүреді</label>
+          <div class="explain">Дұрыс жауап: E. Тепе-теңдік сырттай тұрақты көрінгенімен, микродеңгейде реакциялар жүріп тұрады.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>12. aA + bB ⇄ cC + dD реакциясы үшін Kc өрнегі:</p>
+          <label class="option"><input type="radio" name="b7q12" value="0"> Kc = [A]^a[B]^b / [C]^c[D]^d</label>
+          <label class="option"><input type="radio" name="b7q12" value="1"> Kc = [A][B][C][D]</label>
+          <label class="option"><input type="radio" name="b7q12" value="2"> Kc = [C]^c[D]^d / [A]^a[B]^b</label>
+          <label class="option"><input type="radio" name="b7q12" value="3"> Kc = [A]^c[D]^b / [C]^a[B]^d</label>
+          <label class="option"><input type="radio" name="b7q12" value="4"> Kc = [C] + [D] − [A] − [B]</label>
+          <div class="explain">Дұрыс жауап: C. Тепе-теңдік константасында өнімдер концентрациялары алымда, бастапқы заттар бөлімде жазылады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>13. N₂ + 3H₂ ⇄ 2NH₃ жүйесінде қысым артқанда тепе-теңдік қай бағытқа ығысады?</p>
+          <label class="option"><input type="radio" name="b7q13" value="0"> NH₃ түзілу бағытына</label>
+          <label class="option"><input type="radio" name="b7q13" value="1"> N₂ және H₂ түзілу бағытына</label>
+          <label class="option"><input type="radio" name="b7q13" value="2"> Екі бағытқа бірдей толық тоқтайды</label>
+          <label class="option"><input type="radio" name="b7q13" value="3"> Тек сутек ыдырау бағытына</label>
+          <label class="option"><input type="radio" name="b7q13" value="4"> Ығыспайды, себебі барлық коэффициенттер бірдей</label>
+          <div class="explain">Дұрыс жауап: A. Сол жақта 4 моль газ, оң жақта 2 моль газ. Қысым артқанда газ молекуласы аз жаққа, яғни NH₃ жағына ығысады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>14. 2SO₂ + O₂ ⇄ 2SO₃, ΔH &lt; 0. Температура артқанда тепе-теңдік қай бағытқа ығысады?</p>
+          <label class="option"><input type="radio" name="b7q14" value="0"> SO₃ түзілу бағытына</label>
+          <label class="option"><input type="radio" name="b7q14" value="1"> Газ молекуласы аз жаққа ғана</label>
+          <label class="option"><input type="radio" name="b7q14" value="2"> Ығыспайды, себебі реакция қайтымды</label>
+          <label class="option"><input type="radio" name="b7q14" value="3"> SO₂ және O₂ түзілу бағытына</label>
+          <label class="option"><input type="radio" name="b7q14" value="4"> Тек катализатор жағына</label>
+          <div class="explain">Дұрыс жауап: D. Тура реакция экзотермиялық. Температура артқанда жүйе жылуды сіңіретін кері, эндотермиялық бағытқа ығысады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>15. N₂ + 3H₂ ⇄ 2NH₃ жүйесіне H₂ концентрациясын арттырса, тепе-теңдік:</p>
+          <label class="option"><input type="radio" name="b7q15" value="0"> Солға ығысады</label>
+          <label class="option"><input type="radio" name="b7q15" value="1"> NH₃ түзілу бағытына ығысады</label>
+          <label class="option"><input type="radio" name="b7q15" value="2"> Міндетті түрде тоқтайды</label>
+          <label class="option"><input type="radio" name="b7q15" value="3"> Иондық тепе-теңдікке айналады</label>
+          <label class="option"><input type="radio" name="b7q15" value="4"> Константа мәнін концентрациясыз нөлге түсіреді</label>
+          <div class="explain">Дұрыс жауап: B. H₂ көбейсе, жүйе оны жұмсайтын бағытқа, яғни NH₃ түзілуіне қарай ығысады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>16. Қай тұжырым Ле Шателье принципіне сәйкес келеді?</p>
+          <label class="option"><input type="radio" name="b7q16" value="0"> Жүйеге әсер жасалса, ол әсерді күшейтетін бағытқа ығысады</label>
+          <label class="option"><input type="radio" name="b7q16" value="1"> Температура өзгерісі тепе-теңдікке әсер етпейді</label>
+          <label class="option"><input type="radio" name="b7q16" value="2"> Қысым өзгерісі газ жүйелеріне ешқашан әсер етпейді</label>
+          <label class="option"><input type="radio" name="b7q16" value="3"> Катализатор тепе-теңдікті тек өнімдер жағына ығыстырады</label>
+          <label class="option"><input type="radio" name="b7q16" value="4"> Жүйе сыртқы әсерді әлсірететін бағытта ығысады</label>
+          <div class="explain">Дұрыс жауап: E. Ле Шателье принципі тепе-теңдіктің сыртқы әсерге қарсы бағытта ығысуын түсіндіреді.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block7')">Тестті тексеру</button>
+      </div>
+    </section>
+    
+    
